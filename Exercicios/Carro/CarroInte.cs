@@ -1,9 +1,9 @@
 ﻿namespace ProjetoCurso.Exercicios.Carro;
-using ProjetoCurso.UIMenu;
+using ProjetoCurso.UI;
 
 internal class InteCarro : UIMenu
 {
-    public override void Executar()
+    public override async Task Executar()
     {
         base.Executar();
         ExibirTituloDoExercicio("Exercício sobre Carro");
@@ -43,7 +43,5 @@ internal class InteCarro : UIMenu
             Console.ReadKey();
             Console.Clear();
         }
-
-
     }
 }
