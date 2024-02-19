@@ -1,5 +1,6 @@
 ﻿namespace ProjetoCurso.Exercicios.Conta;
-using UIMenu;
+using ProjetoCurso.UI;
+
 internal class Conta : UIMenu
 {
     private string Titular;

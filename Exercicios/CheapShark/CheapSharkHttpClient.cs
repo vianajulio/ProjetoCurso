@@ -2,8 +2,15 @@
 
 namespace ProjetoCurso.Exercicios.CheapShark;
 
-internal class CheapSharkHttpClient
+using ProjetoCurso.UI;
+internal class CheapSharkHttpClient : UIMenu
 {
+    public override async Task Executar()
+    {
+        await base.Executar();
+        ExibirTituloDoExercicio("Exercício sobre CheapShark");
+        await CheapSharkHttp();
+    }
     public static async Task CheapSharkHttp()
     {
         using (HttpClient client = new HttpClient())
@@ -12,7 +19,7 @@ internal class CheapSharkHttpClient
             {
                 string response = await client.GetStringAsync("https://raw.githubusercontent.com/ArthurOcFernandes/Exerc-cios-C-/curso-4-aula-2/Jsons/Livros.json");
                 var cheapShark = JsonSerializer.Deserialize<List<CheapShark>>(response);
-                cheapShark.ForEach(filme => filme.MostrarDados());
+                cheapShark!.ForEach(filme => filme.MostrarDados());
             }
             catch (Exception e)
             {

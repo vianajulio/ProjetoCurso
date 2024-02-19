@@ -1,16 +1,13 @@
 ﻿namespace ProjetoCurso.Exercicios.Filmes;
-using System.Text.Json;
-using ProjetoCurso.UIMenu;
-
-internal class Filme : UIMenu
+using ProjetoCurso.UI;
+class Filmes : UIMenu
 {
     public override async Task Executar()
     {
-        base.Executar();
+        await base.Executar();
         ExibirTituloDoExercicio("Exercício sobre Filme");
         await MostrarDados();
     }
-
     public static async Task MostrarDados()
     {
         using (HttpClient client = new HttpClient())
@@ -19,8 +16,7 @@ internal class Filme : UIMenu
             {
                 string respFilmes = await client.GetStringAsync("https://raw.githubusercontent.com/ArthurOcFernandes/Exerc-cios-C-/curso-4-aula-2/Jsons/TopMovies.json");
                 var filmes = JsonSerializer.Deserialize<List<FilmeDesserializer>>(respFilmes);
-                //filmes[2].MostarDetalhesFilme();
-                filmes.ForEach(filme => filme.MostarDetalhesFilme());
+                filmes!.ForEach(filme => filme.MostarDetalhesFilme());
             }
             catch (Exception e)
             {
