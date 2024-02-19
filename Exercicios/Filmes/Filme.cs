@@ -1,8 +1,8 @@
 ﻿using ProjetoCurso;
 using System.Text.Json;
-internal class Filme
+class Filme
 {
-    private static async Task Main(string[] args)
+    public static async Task Main()
     {
         using (HttpClient client = new HttpClient())
         {
@@ -10,7 +10,7 @@ internal class Filme
             {
                 string respFilmes = await client.GetStringAsync("https://raw.githubusercontent.com/ArthurOcFernandes/Exerc-cios-C-/curso-4-aula-2/Jsons/TopMovies.json");
                 var filmes = JsonSerializer.Deserialize<List<FilmeDesserializer>>(respFilmes);
-                filmes[4].MostarDetalhesFilme();
+                filmes[2].MostarDetalhesFilme();
             }
             catch (Exception e)
             {
