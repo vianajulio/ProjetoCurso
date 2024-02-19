@@ -1,34 +1,39 @@
-﻿using ProjetoCurso.UI;
+﻿using ProjetoCurso.Interfaces;
+using ProjetoCurso.UI;
 
 namespace ProjetoCurso.Exercicios.Divisao;
 
 internal class Divisao : UIMenu
 {
-    public override async Task Executar()
+    public void Executar()
     {
         base.Executar();
         ExibirTituloDoExercicio("Exercício sobre Divisão");
         MostrarDivisao();
     }
-    public static async Task MostrarDivisao()
+    public static void MostrarDivisao()
     {
-        await Console.Out.WriteLineAsync("Atividade de divisão\n");
-
-        await Console.Out.WriteLineAsync("Digite um valor: ");
+        Console.WriteLine("Atividade de divisão\n");
+        Console.Out.WriteLine("Digite um valor: ");
         int valor1 = int.Parse(Console.ReadLine());
-        await Console.Out.WriteLineAsync("Digite outro valor: ");
+        Console.Out.WriteLine("Digite outro valor: ");
         int valor2 = int.Parse(Console.ReadLine());
         try
         {
             int resultado = valor1 / valor2;
 
-            await Console.Out.WriteLineAsync($"O Resultado é: {resultado}");
+            Console.Out.WriteLine($"O Resultado é: {resultado}");
             Console.ReadKey();
         }
         catch (Exception ex)
         {
-            await Console.Out.WriteLineAsync($"Ocorreu um erro durante a divisão: {ex.Message}");
+            Console.Out.WriteLine($"Ocorreu um erro durante a divisão: {ex.Message}");
             Console.ReadKey();
         }
+    }
+
+    public override string NomeUI()
+    {
+        return "Divisao";
     }
 }

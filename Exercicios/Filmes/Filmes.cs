@@ -1,4 +1,6 @@
 ﻿namespace ProjetoCurso.Exercicios.Filmes;
+
+using ProjetoCurso.Interfaces;
 using ProjetoCurso.UI;
 using System.Text.Json;
 
@@ -25,5 +27,10 @@ class Filmes : UIMenu
                 Console.WriteLine($"Ocorreu um erro {e.Message}");
             }
         }
+    }
+
+    public override string NomeUI()
+    {
+        return "Filmes HTTP JSON";
     }
 }

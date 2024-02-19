@@ -1,4 +1,6 @@
 ﻿namespace ProjetoCurso.Exercicios.Conta;
+
+using ProjetoCurso.Interfaces;
 using ProjetoCurso.UI;
 
 internal class Conta : UIMenu
@@ -8,7 +10,7 @@ internal class Conta : UIMenu
 
     public override async Task Executar()
     {
-        base.Executar();
+        await base.Executar();
         ExibirTituloDoExercicio("Exercício sobre Conta");
         MostrarDados();
     }
@@ -23,4 +25,10 @@ internal class Conta : UIMenu
     {
         Console.WriteLine($"Titular: {Titular} \nSaldo: {Saldo}");
     }
+
+    public override string NomeUI()
+    {
+        return "Conta Simples";
+    }
+
 }

@@ -1,19 +1,19 @@
 ﻿namespace ProjetoCurso.Exercicios.Filmes;
 
+using ProjetoCurso.Interfaces;
 using ProjetoCurso.UI;
 using System.Text.Json;
 
-internal class CarDes : UIMenu
+internal class CarroJSON : UIMenu
 {
     public override async Task Executar()
     {
-        base.Executar();
+        await base.Executar();
         ExibirTituloDoExercicio("Exercício sobre Filme");
-        MostrarDadosCarros();
+        await MostrarDadosCarros();
     }
 
-    public static async Task
-MostrarDadosCarros()
+    public static async Task MostrarDadosCarros()
     {
         using (HttpClient client = new HttpClient())
         {
@@ -21,13 +21,17 @@ MostrarDadosCarros()
             {
                 string respCarros = await client.GetStringAsync("https://raw.githubusercontent.com/ArthurOcFernandes/Exerc-cios-C-/curso-4-aula-2/Jsons/Carros.json");
                 var carros = JsonSerializer.Deserialize<List<CarroDesserializer>>(respCarros);
-                //filmes[2].MostarDetalhesFilme();
-                carros.ForEach(carros => carros.MostrarDetalhesCarros());
+                carros!.ForEach(carros => carros.MostrarDetalhesCarros());
             }
             catch (Exception e)
             {
                 Console.WriteLine($"Ocorreu um erro {e.Message}");
             }
         }
+    }
+
+    public override string NomeUI()
+    {
+        return "Carro JSON";
     }
 }

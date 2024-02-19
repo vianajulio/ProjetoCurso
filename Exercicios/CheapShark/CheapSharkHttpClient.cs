@@ -2,6 +2,7 @@
 
 namespace ProjetoCurso.Exercicios.CheapShark;
 
+using ProjetoCurso.Interfaces;
 using ProjetoCurso.UI;
 internal class CheapSharkHttpClient : UIMenu
 {
@@ -26,5 +27,10 @@ internal class CheapSharkHttpClient : UIMenu
                 Console.WriteLine($"Ocorreu um erro {e.Message}");
             }
         }
+    }
+
+    public override string NomeUI()
+    {
+        return "Cheap Shark HTTP JSON";
     }
 }

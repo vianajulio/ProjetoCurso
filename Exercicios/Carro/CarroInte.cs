@@ -1,11 +1,13 @@
 ﻿namespace ProjetoCurso.Exercicios.Carro;
+
+using ProjetoCurso.Interfaces;
 using ProjetoCurso.UI;
 
 internal class InteCarro : UIMenu
 {
     public override async Task Executar()
     {
-        base.Executar();
+        await base.Executar();
         ExibirTituloDoExercicio("Exercício sobre Carro");
         CarroInte();
     }
@@ -43,5 +45,9 @@ internal class InteCarro : UIMenu
             Console.ReadKey();
             Console.Clear();
         }
+    }
+    public override string NomeUI()
+    {
+        return "Carro";
     }
 }

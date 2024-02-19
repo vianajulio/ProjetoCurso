@@ -1,4 +1,6 @@
 ﻿namespace ProjetoCurso.Exercicios.ContaBancaria;
+
+using ProjetoCurso.Interfaces;
 using ProjetoCurso.UI;
 
 internal class ContaBancaria : UIMenu
@@ -29,5 +31,10 @@ internal class ContaBancaria : UIMenu
         Console.WriteLine($"Titular: {Titular}");
         Console.WriteLine($"Saldo: {Saldo}");
         Console.WriteLine($"Senha: {Senha}");
+    }
+
+    public override string NomeUI()
+    {
+        return "Conta Bancária";
     }
 }
