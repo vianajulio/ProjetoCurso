@@ -1,9 +1,7 @@
-﻿using ProjetoCurso.Exercicios.Livros;
-
-class Program
+﻿class Program
 {
-    static async Task Main()
+    static async Task FilmeMostrar()
     {
-        await LivrosHttpClient.LivrosHttp();
+        await Filme.Main();
     }
 }

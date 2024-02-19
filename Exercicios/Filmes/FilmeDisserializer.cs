@@ -2,15 +2,12 @@
 
 namespace ProjetoCurso
 {
-    internal class FilmeDesserializer
+    class FilmeDesserializer
     {
         [JsonPropertyName("title")]
         public string? Nome { get; set; }
         [JsonPropertyName("year")]
-        public string? AnoL
-        {
-            get; set;
-        }
+        public string? AnoL{ get; set;}
         [JsonPropertyName("crew")]
         public string? Direcao { get; set; }
         [JsonPropertyName("rank")]
