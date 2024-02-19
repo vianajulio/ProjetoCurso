@@ -1,8 +1,14 @@
-﻿using ProjetoCurso;
+﻿namespace ProjetoCurso.Exercicios.Filmes;
+
 using System.Text.Json;
-class Filme
+internal class Filme /*: Interface*/
 {
-    public static async Task Main()
+    //public override void Executar()
+    //{
+    //    base.Executar();
+    //    Mostrar();
+    //}
+    private static async Task Mostrar()
     {
         using (HttpClient client = new HttpClient())
         {
@@ -10,7 +16,7 @@ class Filme
             {
                 string respFilmes = await client.GetStringAsync("https://raw.githubusercontent.com/ArthurOcFernandes/Exerc-cios-C-/curso-4-aula-2/Jsons/TopMovies.json");
                 var filmes = JsonSerializer.Deserialize<List<FilmeDesserializer>>(respFilmes);
-                filmes[2].MostarDetalhesFilme();
+                filmes[4].MostarDetalhesFilme();
             }
             catch (Exception e)
             {

@@ -1,4 +1,5 @@
-﻿class Carro
+﻿namespace ProjetoCurso.Exercicios.Carro;
+internal class Carro
 {
     private int Velocidade { get; set; }
 
