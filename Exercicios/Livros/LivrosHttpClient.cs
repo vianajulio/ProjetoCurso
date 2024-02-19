@@ -12,7 +12,7 @@ internal class LivrosHttpClient
             {
                 string resLivros = await client.GetStringAsync("https://raw.githubusercontent.com/ArthurOcFernandes/Exerc-cios-C-/curso-4-aula-2/Jsons/Livros.json");
                 var livros = JsonSerializer.Deserialize<List<Livros>>(resLivros);
-                livros.ForEach(filme => filme.MostrarDados());
+                livros!.ForEach(filme => filme.MostrarDados());
             }
             catch (Exception e)
             {
