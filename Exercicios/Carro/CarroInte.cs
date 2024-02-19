@@ -1,12 +1,14 @@
 ﻿namespace ProjetoCurso.Exercicios.Carro;
+using ProjetoCurso.UIMenu;
 
-internal class InteCarro /*: Interface*/
+internal class InteCarro : UIMenu
 {
-    //public override void Executar()
-    //{
-    //    base.Executar();
-    //    CarroInte();
-    //}
+    public override async Task Executar()
+    {
+        base.Executar();
+        ExibirTituloDoExercicio("Exercício sobre Carro");
+        CarroInte();
+    }
     public static async Task CarroInte()
     {
         Carro carro = new();

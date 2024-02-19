@@ -1,8 +1,14 @@
-﻿
-namespace ProjetoCurso.Exercicios.ContaBancaria;
-
-internal class ContaBancaria
+﻿namespace ProjetoCurso.Exercicios.ContaBancaria;
+using UIMenu;
+internal class ContaBancaria : UIMenu
 {
+    public override async Task Executar()
+    {
+        base.Executar();
+        ExibirTituloDoExercicio("Exercício sobre ContaBancaria");
+        MostrarDados();
+    }
+
     public int Indicador { get; }
     private string Titular { get; }
     private float Saldo { get; }

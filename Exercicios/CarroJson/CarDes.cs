@@ -2,25 +2,26 @@
 using System.Text.Json;
 using ProjetoCurso.UIMenu;
 
-internal class Filme : UIMenu
+internal class CarDes : UIMenu
 {
     public override async Task Executar()
     {
         base.Executar();
         ExibirTituloDoExercicio("Exercício sobre Filme");
-        await MostrarDados();
+        MostrarDadosCarros();
     }
 
-    public static async Task MostrarDados()
+    public static async Task
+MostrarDadosCarros()
     {
         using (HttpClient client = new HttpClient())
         {
             try
             {
-                string respFilmes = await client.GetStringAsync("https://raw.githubusercontent.com/ArthurOcFernandes/Exerc-cios-C-/curso-4-aula-2/Jsons/TopMovies.json");
-                var filmes = JsonSerializer.Deserialize<List<FilmeDesserializer>>(respFilmes);
+                string respCarros = await client.GetStringAsync("https://raw.githubusercontent.com/ArthurOcFernandes/Exerc-cios-C-/curso-4-aula-2/Jsons/Carros.json");
+                var carros = JsonSerializer.Deserialize<List<CarroDesserializer>>(respCarros);
                 //filmes[2].MostarDetalhesFilme();
-                filmes.ForEach(filme => filme.MostarDetalhesFilme());
+                carros.ForEach(carros => carros.MostrarDetalhesCarros());
             }
             catch (Exception e)
             {
