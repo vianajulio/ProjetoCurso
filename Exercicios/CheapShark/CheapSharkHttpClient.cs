@@ -2,8 +2,16 @@
 
 namespace ProjetoCurso.Exercicios.CheapShark;
 
-internal class CheapSharkHttpClient
+using ProjetoCurso.UIMenu;
+
+internal class CheapSharkHttpClient : UIMenu
 {
+    public override void Executar()
+    {
+        base.Executar();
+        ExibirTituloDoExercicio("Exercício sobre CheapShark");
+        CheapSharkHttp();
+    }
     public static async Task CheapSharkHttp()
     {
         using (HttpClient client = new HttpClient())

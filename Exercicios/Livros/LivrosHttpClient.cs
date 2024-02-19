@@ -1,9 +1,16 @@
 ﻿using System.Text.Json;
 
 namespace ProjetoCurso.Exercicios.Livros;
+using ProjetoCurso.UIMenu;
 
-internal class LivrosHttpClient
+internal class LivrosHttpClient : UIMenu
 {
+    public override void Executar()
+    {
+        base.Executar();
+        ExibirTituloDoExercicio("Exercício sobre Livros");
+        LivrosHttp();
+    }
     public static async Task LivrosHttp()
     {
         using (HttpClient client = new HttpClient())

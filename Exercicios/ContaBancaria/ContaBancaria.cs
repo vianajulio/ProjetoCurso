@@ -1,7 +1,8 @@
 ﻿
 namespace ProjetoCurso.Exercicios.ContaBancaria;
+using ProjetoCurso.UIMenu;
 
-internal class ContaBancaria
+internal class ContaBancaria : UIMenu
 {
     public int Indicador { get; }
     private string Titular { get; }
@@ -14,6 +15,13 @@ internal class ContaBancaria
         Titular = titular;
         Saldo = saldo;
         Senha = senha;
+    }
+
+    public override void Executar()
+    {
+        base.Executar();
+        ExibirTituloDoExercicio("Exercício sobre Conta Bancaria");
+        MostrarDados();
     }
 
     public void MostrarDados()

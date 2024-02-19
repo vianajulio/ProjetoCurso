@@ -1,9 +1,19 @@
 ﻿using System.Text.Json;
 namespace ProjetoCurso.Exercicios.Filmes;
-class Filme
+using ProjetoCurso.UIMenu;
+class Filme : UIMenu
 {
+    public override void Executar()
+    {
+        base.Executar();
+        ExibirTituloDoExercicio("Exercício sobre Filme");
+        MostrarDados();
+    }
+
     public static async     Task
-MostrarDados()
+
+        
+    MostrarDados()
     {
         using (HttpClient client = new HttpClient())
         {
