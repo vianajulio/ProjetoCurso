@@ -1,17 +1,35 @@
 ﻿namespace ProjetoCurso.Exercicios.Carro;
-
 using ProjetoCurso.UIMenu;
-
 internal class Carro : UIMenu
 {
+    private int Velocidade { get; set; }
+
+    public int VelocidadeReal
+    {
+        get
+        {
+            return Velocidade;
+        }
+    }
     public override void Executar()
     {
         base.Executar();
-        ExibirTituloDoExercicio("Exercício sobre carro - 01");
-        ConfirmarEntrada();
+        ExibirTituloDoExercicio("Exercício sobre Carro");
     }
-    void ConfirmarEntrada()
+    public void Acelerar()
     {
-        Console.WriteLine("Entrou na classe Carro");
+        this.Velocidade += 10;
+    }
+
+    public void Frear(int Pressao)
+    {
+        this.Velocidade -= (this.Velocidade < (Pressao * 10) ? Velocidade : (Pressao * 10));
+    }
+
+    public void Buzinar()
+    {
+        Console.Beep();
     }
 }
+
+
