@@ -1,6 +1,5 @@
 ﻿namespace ProjetoCurso.Exercicios.Carro;
-using ProjetoCurso.UIMenu;
-internal class Carro : UIMenu
+internal class Carro
 {
     private int Velocidade { get; set; }
 
@@ -10,11 +9,6 @@ internal class Carro : UIMenu
         {
             return Velocidade;
         }
-    }
-    public override void Executar()
-    {
-        base.Executar();
-        ExibirTituloDoExercicio("Exercício sobre Carro");
     }
     public void Acelerar()
     {

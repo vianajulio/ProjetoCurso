@@ -1,8 +1,8 @@
-﻿using ProjetoCurso.UIMenu;
-using ProjetoCurso.Exercicios.Carro;
+﻿using ProjetoCurso.Exercicios.Carro;
+using ProjetoCurso.UIMenu;
 
 Dictionary<int, UIMenu> opcoes = new();
-opcoes.Add(1, new Carro());
+opcoes.Add(1, new InteCarro());
 
 void ExibirCabecalho()
 {
