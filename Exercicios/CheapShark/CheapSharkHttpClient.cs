@@ -17,7 +17,7 @@ internal class CheapSharkHttpClient : UIMenu
         {
             try
             {
-                string response = await client.GetStringAsync("https://raw.githubusercontent.com/ArthurOcFernandes/Exerc-cios-C-/curso-4-aula-2/Jsons/Livros.json");
+                string response = await client.GetStringAsync("https://www.cheapshark.com/api/1.0/deals");
                 var cheapShark = JsonSerializer.Deserialize<List<CheapShark>>(response);
                 cheapShark!.ForEach(filme => filme.MostrarDados());
             }

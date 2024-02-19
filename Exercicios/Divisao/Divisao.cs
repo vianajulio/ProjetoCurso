@@ -1,5 +1,7 @@
-﻿namespace ProjetoCurso.Exercicios.Divisao;
-using UIMenu;
+﻿using ProjetoCurso.UI;
+
+namespace ProjetoCurso.Exercicios.Divisao;
+
 internal class Divisao : UIMenu
 {
     public override async Task Executar()
@@ -28,12 +30,5 @@ internal class Divisao : UIMenu
             await Console.Out.WriteLineAsync($"Ocorreu um erro durante a divisão: {ex.Message}");
             Console.ReadKey();
         }
-        //if (valor2 == null)
-        //{
-        //    await Console.Out.WriteLineAsync($"Não é possivel Dividir {valor1} por 0! Entre com outro numero inteiro.");
-        //    valor2 = Console.Read();
-        //}
-        //else
-        //{ }
     }
 }

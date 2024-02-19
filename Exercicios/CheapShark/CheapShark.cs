@@ -1,6 +1,4 @@
-﻿using System.Text.Json.Serialization;
-
-namespace ProjetoCurso.Exercicios.CheapShark;
+﻿namespace ProjetoCurso.Exercicios.CheapShark;
 
 internal class CheapShark
 {
@@ -10,7 +8,7 @@ internal class CheapShark
 
     public string metacriticLink { get; set; }
 
-    public int storeID { get; set; }
+    public string storeID { get; set; }
 
     public string gameID { get; set; }
 
@@ -43,6 +41,6 @@ internal class CheapShark
 
     public void MostrarDados()
     {
-        Console.WriteLine($"internalName: {internalName} \ntitle: {title} \nmetacriticLink: {metacriticLink} \nstoreID: {storeID} \ngameID: {gameID} \nsalePrice: {salePrice} \nnormalPrice: {normalPrice} \nisOnSale: {isOnSale} \nsaving: {savings} \nmetacriticScore: {metacriticScore} \nsteamRatingText: {steamRatingText} \nsteamRatingPercent: {steamRatingPercent} \nsteamRatingCount: {steamRatingCount} \nsteamAppID: {steamAppID} \nreleseDate: {releseDate} \nlastChange: {lastChange} \ndealRating: {dealRating} \nthumb: {thumb}");
+        Console.WriteLine($"internalName: {internalName} \ntitle: {title} \nmetacriticLink: {metacriticLink} \nstoreID: {storeID} \ngameID: {gameID} \nsalePrice: {salePrice} \nnormalPrice: {normalPrice} \nisOnSale: {isOnSale} \nsaving: {savings} \nmetacriticScore: {metacriticScore} \nsteamRatingText: {steamRatingText} \nsteamRatingPercent: {steamRatingPercent} \nsteamRatingCount: {steamRatingCount} \nsteamAppID: {steamAppID} \nreleseDate: {releseDate} \nlastChange: {lastChange} \ndealRating: {dealRating} \nthumb: {thumb} \n");
     }
 }
