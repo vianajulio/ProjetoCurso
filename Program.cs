@@ -19,7 +19,6 @@ class Program
         opcoes.Add(5, new Filmes());
         opcoes.Add(6, new LivrosHttpClient());
 
-        UIMenu.ExibirCabecalho();
         await UIMenu.ExibirOpcoes(opcoes);
     }
 }

@@ -16,6 +16,7 @@ internal class UIMenu
     }
     public static void ExibirCabecalho()
     {
+        Console.Clear();
         Console.WriteLine(@"
           _____                                                   _____                         
          |  __ \                                                 / ____|                        
@@ -29,29 +30,53 @@ internal class UIMenu
         Console.WriteLine("Bem vindo! Aqui você poderá acompanhar a evolução dos Devs Jr's.\n\n\n");
     }
 
+    static void ErroInput()
+    {
+        Console.Clear();
+        ExibirCabecalho();
+        Console.WriteLine("Opção Inválida!");
+        Console.WriteLine("Aperte uma tecla para voltar ao menu\n");
+    }
+
     public static async Task ExibirOpcoes(Dictionary<int, UIMenu> opcoes)
     {
+        ExibirCabecalho();
+
         Console.WriteLine("Veja os exercicios realizados durante o curso:");
-        Console.WriteLine("\n* Digite 1 para ver os exercicio sobre aceleração de carro;");
+        Console.WriteLine("\n* Digite 0 para sair;");
+        Console.WriteLine("* Digite 1 para ver os exercicio sobre aceleração de carro;");
         Console.WriteLine("* Digite 2 para ver os exercicio sobre exibição das informações sobre CheapShark puxadas de uma API;");
         Console.WriteLine("* Digite 3 para ver os exercicio sobre exibição dos valores de uma conta;");
         Console.WriteLine("* Digite 4 para ver os exercicio sobre exibição dos valores de uma conta bancária;");
         Console.WriteLine("* Digite 5 para ver os exercicio sobre exibição das informações sobre Filmes puxadas de uma API;");
         Console.WriteLine("* Digite 6 para ver os exercicio sobre exibição das informações sobre Livros puxadas de uma API;");
         Console.Write("\n-> Sua resposta: ");
-        string opcaoSelecionada = Console.ReadLine();
-        int opcaoConverted = int.Parse(opcaoSelecionada);
+        string opcaoSelecionada = Console.ReadLine() ?? "";
+        try
+        {
+            int opcaoConverted = int.Parse(opcaoSelecionada);
 
-        if (opcoes.ContainsKey(opcaoConverted))
-        {
-            UIMenu exercicioASerExibido = opcoes[opcaoConverted];
-            await exercicioASerExibido.Executar();
+            if (opcoes.ContainsKey(opcaoConverted))
+            {
+                UIMenu exercicioASerExibido = opcoes[opcaoConverted];
+                await exercicioASerExibido.Executar();
+
+                Console.WriteLine("Clique em qualquer tecla para voltar ao menu.");
+                Console.ReadKey();
+                Console.Clear();
+                await ExibirOpcoes(opcoes);
+            }
+            else if (opcaoConverted == 0)
+            {
+                Environment.Exit(0);
+            }
+            ErroInput();
+            await ExibirOpcoes(opcoes);
         }
-        else
+        catch
         {
-            Console.Clear();
-            ExibirCabecalho();
-            Console.WriteLine("***** Opção Inválida *****\n");
+            ErroInput();
+            Console.ReadKey();
             await ExibirOpcoes(opcoes);
         }
     }
