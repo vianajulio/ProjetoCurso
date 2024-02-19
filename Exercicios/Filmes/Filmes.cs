@@ -1,5 +1,7 @@
 ﻿namespace ProjetoCurso.Exercicios.Filmes;
 using ProjetoCurso.UI;
+using System.Text.Json;
+
 class Filmes : UIMenu
 {
     public override async Task Executar()

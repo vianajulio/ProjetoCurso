@@ -1,8 +1,5 @@
 ﻿namespace ProjetoCurso.Exercicios.Livros;
 using System.Text.Json;
-using UIMenu;
-
-namespace ProjetoCurso.Exercicios.Livros;
 using ProjetoCurso.UI;
 
 internal class LivrosHttpClient : UIMenu
