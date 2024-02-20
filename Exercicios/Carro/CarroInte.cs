@@ -1,21 +1,23 @@
 ﻿namespace ProjetoCurso.Exercicios.Carro;
-using ProjetoCurso.UIMenu;
+
+using ProjetoCurso.Interfaces;
+using ProjetoCurso.UI;
 
 internal class InteCarro : UIMenu
 {
-    public override void Executar()
+    public override async Task Executar()
     {
-        base.Executar();
+        await base.Executar();
         ExibirTituloDoExercicio("Exercício sobre Carro");
         CarroInte();
     }
-    public static async Task CarroInte()
+    public static void CarroInte()
     {
         Carro carro = new();
         while (true)
         {
             Console.WriteLine("Digite 1 para Acelerar\nDigite 2 para Freiar\nDigite 3 para buzinar\nDigite 4 para finalizar");
-            int Digito = int.Parse(Console.ReadLine());
+            int Digito = int.Parse(Console.ReadLine() ?? "0");
 
             void MostrarVelocidade()
             {
@@ -32,7 +34,7 @@ internal class InteCarro : UIMenu
                     break;
                 case 2:
                     Console.Write("Digite a pressão desejada: ");
-                    int pressao = int.Parse(Console.ReadLine());
+                    int pressao = int.Parse(Console.ReadLine() ?? "0");
                     carro.Frear(pressao);
                     MostrarVelocidade();
                     break;
@@ -43,7 +45,9 @@ internal class InteCarro : UIMenu
             Console.ReadKey();
             Console.Clear();
         }
-
-
+    }
+    public override string NomeUI()
+    {
+        return "Carro";
     }
 }
