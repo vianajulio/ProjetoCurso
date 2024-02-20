@@ -20,7 +20,7 @@ class Program
         opcoes.Add("Conta", new Conta("Fraga", 100));
         opcoes.Add("ContaBancaria", new ContaBancaria(1, "Fraga", 100, 123));
         opcoes.Add("Cheap Shark HTTP", new CheapSharkHttpClient());
-        opcoes.Add("Livrs HTTP", new LivrosHttpClient());
+        opcoes.Add("Livros HTTP", new LivrosHttpClient());
         opcoes.Add("Pais", new PaisMain());
         opcoes.Add("Usuarios", new Usuarios());
 
