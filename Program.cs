@@ -7,6 +7,7 @@ using ProjetoCurso.Exercicios.Livros;
 using ProjetoCurso.Exercicios.Usuarios;
 using ProjetoCurso.Exercicios.Paises;
 using ProjetoCurso.UI;
+using ProjetoCurso.Exercicios.Oficina;
 
 
 namespace ProjetoCurso;
@@ -23,6 +24,7 @@ class Program
         opcoes.Add("Livros HTTP", new LivrosHttpClient());
         opcoes.Add("Pais", new PaisMain());
         opcoes.Add("Usuarios", new Usuarios());
+        opcoes.Add("Oficina", new OficinaAuto());
 
         await UIMenu.ExibirOpcoes(opcoes);
     }

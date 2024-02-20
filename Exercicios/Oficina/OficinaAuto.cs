@@ -54,8 +54,4 @@ internal class OficinaAuto : UIMenu
         VeiculoOficina veiculoManutencao = new VeiculoOficina(veiculo, responsavel, valorReparo, problemaVeiculo);
     }
 
-    public override string NomeUI()
-    {
-        return "Oficina de Autos";
-    }
 }
