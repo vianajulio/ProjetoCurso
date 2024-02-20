@@ -1,6 +1,4 @@
 ﻿namespace ProjetoCurso.Exercicios.ContaBancaria;
-
-
 using ProjetoCurso.UI;
 
 internal class ContaBancaria : UIMenu
