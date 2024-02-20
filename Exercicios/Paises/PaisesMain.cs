@@ -1,12 +1,13 @@
-﻿using System.Text.Json;
+﻿using ProjetoCurso.UI;
+using System.Text.Json;
 namespace ProjetoCurso.Exercicios.Paises;
-using ProjetoCurso.UIMenu;
+
 
 class PaisMain : UIMenu
 {
-    public override async void Executar()
+    public override async Task Executar()
     {
-        base.Executar();
+        await base.Executar();
         ExibirTituloDoExercicio("Exercício sobre Paises");
     }
 
