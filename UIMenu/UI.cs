@@ -1,8 +1,6 @@
-﻿using ProjetoCurso.Interfaces;
+﻿namespace ProjetoCurso.UI;
 
-namespace ProjetoCurso.UI;
-
-internal class UIMenu :  InterfaceNome
+internal class UIMenu
 {
     public virtual string NomeUI()
     {
@@ -52,14 +50,8 @@ internal class UIMenu :  InterfaceNome
         Console.WriteLine(opcoes.ToList()[0].Value.NomeUI());
 
         Console.WriteLine("Veja os exercicios realizados durante o curso:");
-        Console.WriteLine("\n* Digite 0 para sair;");
+        Console.WriteLine("\n* Digite 0 para sair *");
         opcoes.ToList().ForEach(opcao => { Console.WriteLine($"* Digite {opcao.Key} para ver o exercicio sobre {opcao.Value.NomeUI()} *"); });
-        //Console.WriteLine("* Digite 1 para ver os exercicio sobre aceleração de carro;");
-        //Console.WriteLine("* Digite 2 para ver os exercicio sobre exibição das informações sobre CheapShark puxadas de uma API;");
-        //Console.WriteLine("* Digite 3 para ver os exercicio sobre exibição dos valores de uma conta;");
-        //Console.WriteLine("* Digite 4 para ver os exercicio sobre exibição dos valores de uma conta bancária;");
-        //Console.WriteLine("* Digite 5 para ver os exercicio sobre exibição das informações sobre Filmes puxadas de uma API;");
-        //Console.WriteLine("* Digite 6 para ver os exercicio sobre exibição das informações sobre Livros puxadas de uma API;");
         Console.Write("\n-> Sua resposta: ");
         string opcaoSelecionada = Console.ReadLine() ?? "";
         try

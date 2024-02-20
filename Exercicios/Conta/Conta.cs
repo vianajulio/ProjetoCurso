@@ -1,6 +1,5 @@
 ﻿namespace ProjetoCurso.Exercicios.Conta;
 
-using ProjetoCurso.Interfaces;
 using ProjetoCurso.UI;
 
 internal class Conta : UIMenu

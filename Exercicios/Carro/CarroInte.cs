@@ -1,6 +1,6 @@
 ﻿namespace ProjetoCurso.Exercicios.Carro;
 
-using ProjetoCurso.Interfaces;
+
 using ProjetoCurso.UI;
 
 internal class InteCarro : UIMenu

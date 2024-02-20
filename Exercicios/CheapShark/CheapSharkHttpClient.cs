@@ -2,7 +2,7 @@
 
 namespace ProjetoCurso.Exercicios.CheapShark;
 
-using ProjetoCurso.Interfaces;
+
 using ProjetoCurso.UI;
 internal class CheapSharkHttpClient : UIMenu
 {
