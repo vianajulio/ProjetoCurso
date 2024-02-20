@@ -24,10 +24,4 @@ internal class Conta : UIMenu
     {
         Console.WriteLine($"Titular: {Titular} \nSaldo: {Saldo}");
     }
-
-    public override string NomeUI()
-    {
-        return "Conta Simples";
-    }
-
 }

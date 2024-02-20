@@ -2,11 +2,6 @@
 
 internal class UIMenu
 {
-    public virtual string NomeUI()
-    {
-        return "";
-    }
-
     public void ExibirTituloDoExercicio(string titulo)
     {
         int tamanhoTitulo = titulo.Length;

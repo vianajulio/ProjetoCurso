@@ -28,9 +28,4 @@ internal class EstoqueProdutos : UIMenu
     {
         Console.WriteLine($"\nProduto cadastrado: {Nome}\nQuantidade em estoque: {Quantidade}\n");
     }
-
-    public override string NomeUI()
-    {
-        return "Estoque de produtos";
-    }
 }

@@ -5,10 +5,6 @@ using ProjetoCurso.UI;
 
 internal class LivrosHttpClient : UIMenu
 {
-    public override string NomeUI()
-    {
-        return "Livros";
-    }
     public override async Task Executar()
     {
         await base.Executar();
