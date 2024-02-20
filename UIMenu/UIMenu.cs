@@ -2,6 +2,7 @@
 
 internal class UIMenu
 {
+
     public void ExibirTituloDoExercicio(string titulo)
     {
         int tamanhoTitulo = titulo.Length;
