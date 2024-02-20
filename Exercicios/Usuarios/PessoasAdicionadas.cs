@@ -1,4 +1,6 @@
-﻿class PessoasAdicionadas
+﻿namespace ProjetoCurso.Exercicios.Usuarios;
+
+class PessoasAdicionadas
 {
     public List<Pessoa> ListaDePessoas { get; }
 
@@ -25,9 +27,5 @@
             Console.WriteLine($"Age: {pessoa.Age}");
             Console.WriteLine($"Email: {pessoa.Email}");
         });
-
-
-        Console.WriteLine("\nPressione qualquer tecla para voltar ao menu principal...");
-        Console.ReadKey();
     }
 }

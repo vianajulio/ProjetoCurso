@@ -5,9 +5,9 @@ namespace ProjetoCurso.Exercicios.Divisao;
 
 internal class Divisao : UIMenu
 {
-    public void Executar()
+    public async override Task Executar()
     {
-        base.Executar();
+        await base.Executar();
         ExibirTituloDoExercicio("Exercício sobre Divisão");
         MostrarDivisao();
     }
@@ -15,9 +15,9 @@ internal class Divisao : UIMenu
     {
         Console.WriteLine("Atividade de divisão\n");
         Console.Out.WriteLine("Digite um valor: ");
-        int valor1 = int.Parse(Console.ReadLine());
+        int valor1 = int.Parse(Console.ReadLine()!);
         Console.Out.WriteLine("Digite outro valor: ");
-        int valor2 = int.Parse(Console.ReadLine());
+        int valor2 = int.Parse(Console.ReadLine()!);
         try
         {
             int resultado = valor1 / valor2;

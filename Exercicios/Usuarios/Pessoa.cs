@@ -1,4 +1,7 @@
-﻿class Pessoa
+﻿namespace ProjetoCurso.Exercicios.Usuarios;
+
+
+class Pessoa
 {
     public string? Name { get; set; }
     public DateTime BirthDate { get; set; }
@@ -33,8 +36,6 @@
         pessoa.Email = email;
 
         pessoas.AdicionarPessoa(pessoa);
-
-        Thread.Sleep(1000);
     }
 
     public void ExibirPessoaAdicionada()

@@ -4,7 +4,9 @@ using ProjetoCurso.Exercicios.Conta;
 using ProjetoCurso.Exercicios.ContaBancaria;
 using ProjetoCurso.Exercicios.Filmes;
 using ProjetoCurso.Exercicios.Livros;
+using ProjetoCurso.Exercicios.Usuarios;
 using ProjetoCurso.UI;
+
 
 namespace ProjetoCurso;
 class Program
@@ -18,6 +20,7 @@ class Program
         opcoes.Add(4, new ContaBancaria(1, "Fraga", 100, 123));
         opcoes.Add(5, new Filmes());
         opcoes.Add(6, new LivrosHttpClient());
+        opcoes.Add(7, new Usuarios());
 
         await UIMenu.ExibirOpcoes(opcoes);
     }
