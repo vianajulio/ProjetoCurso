@@ -46,8 +46,4 @@ internal class InteCarro : UIMenu
             Console.Clear();
         }
     }
-    public override string NomeUI()
-    {
-        return "Carro";
-    }
 }

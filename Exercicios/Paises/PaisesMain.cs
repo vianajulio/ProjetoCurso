@@ -5,10 +5,6 @@ using ProjetoCurso.UI;
 
 class PaisMain : UIMenu
 {
-    public override string NomeUI()
-    {
-        return "Pais";
-    }
     public override async Task Executar()
     {
         await base.Executar();

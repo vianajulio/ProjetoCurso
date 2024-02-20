@@ -28,9 +28,4 @@ class Filmes : UIMenu
             }
         }
     }
-
-    public override string NomeUI()
-    {
-        return "Filmes HTTP JSON";
-    }
 }
