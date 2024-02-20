@@ -16,7 +16,7 @@ internal class OficinaAuto : UIMenu
         "Problema na lataria;"
     };
 
-    public List<VeiculoOficina> veiculoManutencao = new List<VeiculoOficina>
+    public List<VeiculoOficina> veiculosManutencao = new List<VeiculoOficina>
     {
     };
 
@@ -26,11 +26,12 @@ internal class OficinaAuto : UIMenu
         ExibirTituloDoExercicio("Exercício sobre Conta Bancaria");
         CadastrarFicha();
         MostrarFicha();
+        Console.ReadKey();
     }
 
     private void MostrarFicha()
     {
-        veiculoManutencao.ForEach(Console.WriteLine);
+        veiculosManutencao.ForEach(veiculo => veiculo.mostrarDados());
     }
 
     private void CadastrarFicha()
@@ -42,7 +43,6 @@ internal class OficinaAuto : UIMenu
         Console.WriteLine("Digite o valor cotado para o reparo: ");
         double valorReparo = double.Parse(Console.ReadLine());
         Console.WriteLine("Selecione um dos problemas listados: ");
-        problemas.ForEach(Console.WriteLine);
         for (int i = 0; i < problemas.Count; i++)
         {
             Console.WriteLine($"{i} - {problemas[i]}");
@@ -52,6 +52,7 @@ internal class OficinaAuto : UIMenu
 
         string problemaVeiculo = problemas[problema];
         VeiculoOficina veiculoManutencao = new VeiculoOficina(veiculo, responsavel, valorReparo, problemaVeiculo);
+        veiculosManutencao.Add(veiculoManutencao);
     }
 
 }

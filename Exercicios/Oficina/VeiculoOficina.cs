@@ -14,4 +14,12 @@ internal class VeiculoOficina
         ValorReparo = valorReparo;
         ProblemaVeiculo = problemaVeiculo;
     }
+
+    public void mostrarDados()
+    {
+        Console.WriteLine($"\n{Veiculo}");
+        Console.WriteLine(Responsavel);
+        Console.WriteLine(ValorReparo);
+        Console.WriteLine(ProblemaVeiculo);
+    }
 }
