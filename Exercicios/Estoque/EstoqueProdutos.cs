@@ -1,7 +1,5 @@
 ﻿namespace ProjetoCurso.Exercicios.Estoque;
 using ProjetoCurso.UI;
-using System;
-using System.Numerics;
 
 internal class EstoqueProdutos : UIMenu
 {

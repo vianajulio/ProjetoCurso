@@ -5,6 +5,7 @@ using ProjetoCurso.Exercicios.ContaBancaria;
 using ProjetoCurso.Exercicios.Estoque;
 using ProjetoCurso.Exercicios.Filmes;
 using ProjetoCurso.Exercicios.Livros;
+using ProjetoCurso.Exercicios.Oficina;
 using ProjetoCurso.Exercicios.Paises;
 using ProjetoCurso.UI;
 
@@ -20,11 +21,9 @@ class Program
         opcoes.Add(4, new ContaBancaria(1, "Fraga", 100, 123));
         opcoes.Add(5, new Filmes());
         opcoes.Add(6, new LivrosHttpClient());
-<<<<<<< HEAD
         opcoes.Add(7, new EstoqueProdutos());
-=======
         opcoes.Add(7, new PaisMain());
->>>>>>> 9dd0d7b68e3d8b16158aa7edf38657b132c916ef
+        opcoes.Add(8, new OficinaAuto());
 
         await UIMenu.ExibirOpcoes(opcoes);
     }
