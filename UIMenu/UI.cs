@@ -2,11 +2,6 @@
 
 internal class UIMenu
 {
-    public virtual string NomeUI()
-    {
-        return "";
-    }
-
     public void ExibirTituloDoExercicio(string titulo)
     {
         int tamanhoTitulo = titulo.Length;
@@ -55,7 +50,7 @@ internal class UIMenu
         Console.WriteLine("\n* Digite -1 para sair *");
         for (int i = 0; i < listaOpcoes.Count; i++)
         {
-            Console.WriteLine($"* Digite {i} para ver o exercicio sobre {listaOpcoes[i].Key} *");
+            Console.WriteLine($"* Digite {i+1} para ver o exercicio sobre {listaOpcoes[i].Key} *");
         }
         Console.Write("\n-> Sua resposta: ");
         string numeroOpcao = Console.ReadLine() ?? "";

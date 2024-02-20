@@ -30,9 +30,4 @@ internal class ContaBancaria : UIMenu
         Console.WriteLine($"Saldo: {Saldo}");
         Console.WriteLine($"Senha: {Senha}");
     }
-
-    public override string NomeUI()
-    {
-        return "Conta Bancária";
-    }
 }

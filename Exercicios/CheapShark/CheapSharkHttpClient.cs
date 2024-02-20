@@ -28,9 +28,4 @@ internal class CheapSharkHttpClient : UIMenu
             }
         }
     }
-
-    public override string NomeUI()
-    {
-        return "Cheap Shark HTTP JSON";
-    }
 }

@@ -30,9 +30,4 @@ internal class Divisao : UIMenu
             Console.ReadKey();
         }
     }
-
-    public override string NomeUI()
-    {
-        return "Divisao";
-    }
 }

@@ -29,9 +29,4 @@ internal class CarroJSON : UIMenu
             }
         }
     }
-
-    public override string NomeUI()
-    {
-        return "Carro JSON";
-    }
 }
