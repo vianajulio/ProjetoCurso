@@ -1,5 +1,4 @@
-﻿using ProjetoCurso.Interfaces;
-using ProjetoCurso.UI;
+﻿using ProjetoCurso.UI;
 
 namespace ProjetoCurso.Exercicios.Divisao;
 

@@ -1,8 +1,6 @@
-﻿using ProjetoCurso.Interfaces;
+﻿namespace ProjetoCurso.UI;
 
-namespace ProjetoCurso.UI;
-
-internal class UIMenu :  InterfaceNome
+internal class UIMenu
 {
     public virtual string NomeUI()
     {
@@ -45,42 +43,38 @@ internal class UIMenu :  InterfaceNome
         Console.WriteLine("Aperte uma tecla para voltar ao menu\n");
     }
 
-    public static async Task ExibirOpcoes(Dictionary<int, UIMenu> opcoes)
+    public static async Task ExibirOpcoes(Dictionary<string, UIMenu> opcoes)
     {
         ExibirCabecalho();
 
-        Console.WriteLine(opcoes.ToList()[0].Value.NomeUI());
+        List<KeyValuePair<string, UIMenu>> listaOpcoes = opcoes.ToList();
+
+        Console.WriteLine(listaOpcoes[0].Key);
 
         Console.WriteLine("Veja os exercicios realizados durante o curso:");
-        Console.WriteLine("\n* Digite 0 para sair;");
-        opcoes.ToList().ForEach(opcao => { Console.WriteLine($"* Digite {opcao.Key} para ver o exercicio sobre {opcao.Value.NomeUI()} *"); });
-        //Console.WriteLine("* Digite 1 para ver os exercicio sobre aceleração de carro;");
-        //Console.WriteLine("* Digite 2 para ver os exercicio sobre exibição das informações sobre CheapShark puxadas de uma API;");
-        //Console.WriteLine("* Digite 3 para ver os exercicio sobre exibição dos valores de uma conta;");
-        //Console.WriteLine("* Digite 4 para ver os exercicio sobre exibição dos valores de uma conta bancária;");
-        //Console.WriteLine("* Digite 5 para ver os exercicio sobre exibição das informações sobre Filmes puxadas de uma API;");
-        //Console.WriteLine("* Digite 6 para ver os exercicio sobre exibição das informações sobre Livros puxadas de uma API;");
+        Console.WriteLine("\n* Digite -1 para sair *");
+        for (int i = 0; i < listaOpcoes.Count; i++)
+        {
+            Console.WriteLine($"* Digite {i} para ver o exercicio sobre {listaOpcoes[i].Key} *");
+        }
         Console.Write("\n-> Sua resposta: ");
-        string opcaoSelecionada = Console.ReadLine() ?? "";
+        string numeroOpcao = Console.ReadLine() ?? "";
         try
         {
-            int opcaoConverted = int.Parse(opcaoSelecionada);
-
-            if (opcoes.ContainsKey(opcaoConverted))
-            {
-                UIMenu exercicioASerExibido = opcoes[opcaoConverted];
-                await exercicioASerExibido.Executar();
-
-                Console.WriteLine("Clique em qualquer tecla para voltar ao menu.");
-                Console.ReadKey();
-                Console.Clear();
-                await ExibirOpcoes(opcoes);
-            }
-            else if (opcaoConverted == 0)
+            int opcaoConverted = int.Parse(numeroOpcao);
+            if (opcaoConverted == -1)
             {
                 Environment.Exit(0);
+                ErroInput();
+                await ExibirOpcoes(opcoes);
             }
-            ErroInput();
+            var opcaoSelecionada = listaOpcoes[opcaoConverted];
+            UIMenu exercicioASerExibido = opcaoSelecionada.Value;
+            await exercicioASerExibido.Executar();
+
+            Console.WriteLine("Clique em qualquer tecla para voltar ao menu.");
+            Console.ReadKey();
+            Console.Clear();
             await ExibirOpcoes(opcoes);
         }
         catch

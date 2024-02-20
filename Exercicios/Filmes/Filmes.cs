@@ -1,6 +1,6 @@
 ﻿namespace ProjetoCurso.Exercicios.Filmes;
 
-using ProjetoCurso.Interfaces;
+
 using ProjetoCurso.UI;
 using System.Text.Json;
 
