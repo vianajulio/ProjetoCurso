@@ -47,8 +47,6 @@ internal class UIMenu
     {
         ExibirCabecalho();
 
-        Console.WriteLine(opcoes.ToList()[0].Value.NomeUI());
-
         Console.WriteLine("Veja os exercicios realizados durante o curso:");
         Console.WriteLine("\n* Digite 0 para sair *");
         opcoes.ToList().ForEach(opcao => { Console.WriteLine($"* Digite {opcao.Key} para ver o exercicio sobre {opcao.Value.NomeUI()} *"); });
