@@ -1,7 +1,7 @@
-﻿using ProjetoCurso.UI;
-using System.Text.Json;
-namespace ProjetoCurso.Exercicios.Paises;
+﻿using System.Text.Json;
 
+namespace ProjetoCurso.Exercicios.Paises;
+using ProjetoCurso.UI;
 
 class PaisMain : UIMenu
 {
