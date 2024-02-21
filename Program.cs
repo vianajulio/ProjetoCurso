@@ -7,6 +7,7 @@ using ProjetoCurso.Exercicios.Livros;
 using ProjetoCurso.Exercicios.Paises;
 using ProjetoCurso.UI;
 using ProjetoCurso.Exercicios.Oficina;
+using ProjetoCurso.Exercicios.Usuarios;
 
 namespace ProjetoCurso;
 class Program
