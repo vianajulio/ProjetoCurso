@@ -1,8 +1,8 @@
-﻿using ProjetoCurso.UI;
+﻿using ProjetoCurso.UIMenu;
 
 namespace ProjetoCurso.Exercicios.Divisao;
 
-internal class Divisao : UIMenu
+internal class Divisao : Menu
 {
     public async override Task ExecutarMetodosExercicios()
     {

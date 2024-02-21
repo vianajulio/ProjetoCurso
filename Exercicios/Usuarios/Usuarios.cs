@@ -1,7 +1,10 @@
-﻿using ProjetoCurso.UI;
+using ProjetoCurso.UIMenu;
+using ProjetoCurso;
+using ProjetoCurso.Interfaces;
+
 namespace ProjetoCurso.Exercicios.Usuarios;
 
-class Usuarios : UIMenu
+class Usuarios : Menu, InterfaceMenu
 {
     PessoasAdicionadas pessoasAdicionadas = new PessoasAdicionadas();
     Pessoa pessoa = new Pessoa();

@@ -1,8 +1,10 @@
 ﻿namespace ProjetoCurso.Exercicios.Oficina;
-using System;
-using UI;
 
-internal class OficinaAuto : UIMenu
+using ProjetoCurso.Interfaces;
+using System;
+using UIMenu;
+
+internal class OficinaAuto : Menu, InterfaceMenu
 {
     public override async Task ExecutarMetodosExercicios()
     {
@@ -56,6 +58,15 @@ internal class OficinaAuto : UIMenu
     public List<VeiculoOficina> veiculosManutencao = new List<VeiculoOficina>
     {
     };
+    
+    public override async Task ExecutarMetodosExercicios()
+    {
+        await base.ExecutarMetodosExercicios();
+        ExibirTituloDoExercicio("Exercício sobre Conta Bancaria");
+        CadastrarFicha();
+        MostrarFicha();
+        Console.ReadKey();
+    }
 
     private void MostrarFicha()
     {
@@ -64,13 +75,13 @@ internal class OficinaAuto : UIMenu
 
     private void CadastrarFicha()
     {
-        Console.WriteLine("Digite a marca do veiculo, modelo e ano: ");
-        string veiculo = Console.ReadLine();
+        Console.WriteLine("Digite o nome, modelo e ano do veiculo: ");
+        string veiculo = Console.ReadLine() ?? "SEM NOME";
         Console.WriteLine("Digite o nome do mecânico responsavel pelo reparo: ");
-        string responsavel = Console.ReadLine();
+        string responsavel = Console.ReadLine() ?? "SEM NOME";
         Console.WriteLine("Digite o valor cotado para o reparo: ");
-        double valorReparo = double.Parse(Console.ReadLine());
-        Console.Clear();
+        double valorReparo = double.Parse(Console.ReadLine() ?? "0");
+
         Console.WriteLine("Selecione um dos problemas listados: ");
         for (int i = 0; i < problemas.Count; i++)
         {
@@ -78,9 +89,9 @@ internal class OficinaAuto : UIMenu
         }
         
         Console.Write("\nOpção: ");
-        int problema = int.Parse(Console.ReadLine());
+        int numProblema = int.Parse(Console.ReadLine() ?? "0");
 
-        string problemaVeiculo = problemas[problema];
+        string problemaVeiculo = problemas[numProblema];
         VeiculoOficina veiculoManutencao = new VeiculoOficina(veiculo, responsavel, valorReparo, problemaVeiculo);
         veiculosManutencao.Add(veiculoManutencao); 
     }

@@ -1,7 +1,7 @@
 ﻿namespace ProjetoCurso.Exercicios.Estoque;
-using ProjetoCurso.UI;
+using ProjetoCurso.UIMenu;
 
-internal class EstoqueProdutos : UIMenu
+internal class EstoqueProdutos : Menu
 {
     public string Nome { get; set; }
     public int Quantidade { get; set; }    

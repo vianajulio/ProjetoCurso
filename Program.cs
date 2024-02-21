@@ -5,7 +5,7 @@ using ProjetoCurso.Exercicios.ContaBancaria;
 using ProjetoCurso.Exercicios.Filmes;
 using ProjetoCurso.Exercicios.Livros;
 using ProjetoCurso.Exercicios.Paises;
-using ProjetoCurso.UI;
+using ProjetoCurso.UIMenu;
 using ProjetoCurso.Exercicios.Oficina;
 using ProjetoCurso.Exercicios.Usuarios;
 
@@ -14,7 +14,7 @@ class Program
 {
     public static async Task Main(string[] args)
     {
-        Dictionary<string, UIMenu> opcoes = new();
+        Dictionary<string, Menu> opcoes = new();
         opcoes.Add("Carro", new InteCarro());
         opcoes.Add("Filmes", new Filmes());
         opcoes.Add("Conta", new Conta("Fraga", 100));
@@ -25,6 +25,8 @@ class Program
         opcoes.Add("Usuarios", new Usuarios());
         opcoes.Add("Oficina", new OficinaAuto());
 
-        await UIMenu.ExibirOpcoes(opcoes);
+        Menu.ExibirCabecalho();
+        OpcaoMenu.ExibirOpcoes(opcoes);
+        await OpcaoMenu.ExecutarExercicio(opcoes);
     }
 }
