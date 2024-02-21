@@ -4,11 +4,9 @@ using ProjetoCurso.Exercicios.Conta;
 using ProjetoCurso.Exercicios.ContaBancaria;
 using ProjetoCurso.Exercicios.Filmes;
 using ProjetoCurso.Exercicios.Livros;
-using ProjetoCurso.Exercicios.Usuarios;
 using ProjetoCurso.Exercicios.Paises;
 using ProjetoCurso.UI;
 using ProjetoCurso.Exercicios.Oficina;
-
 
 namespace ProjetoCurso;
 class Program

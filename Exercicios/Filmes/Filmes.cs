@@ -6,9 +6,9 @@ using System.Text.Json;
 
 class Filmes : UIMenu
 {
-    public override async Task Executar()
+    public override async Task ExecutarMetodosExercicios()
     {
-        await base.Executar();
+        await base.ExecutarMetodosExercicios();
         ExibirTituloDoExercicio("Exercício sobre Filme");
         await MostrarDados();
     }

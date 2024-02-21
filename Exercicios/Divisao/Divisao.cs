@@ -4,9 +4,9 @@ namespace ProjetoCurso.Exercicios.Divisao;
 
 internal class Divisao : UIMenu
 {
-    public async override Task Executar()
+    public async override Task ExecutarMetodosExercicios()
     {
-        await base.Executar();
+        await base.ExecutarMetodosExercicios();
         ExibirTituloDoExercicio("Exercício sobre Divisão");
         MostrarDivisao();
     }

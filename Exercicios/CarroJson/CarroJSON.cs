@@ -6,10 +6,10 @@ using System.Text.Json;
 
 internal class CarroJSON : UIMenu
 {
-    public override async Task Executar()
+    public override async Task ExecutarMetodosExercicios()
     {
-        await base.Executar();
-        ExibirTituloDoExercicio("Exercício sobre CarroJSON");
+        await base.ExecutarMetodosExercicios();
+        ExibirTituloDoExercicio("Exercício sobre Filme");
         await MostrarDadosCarros();
     }
 
