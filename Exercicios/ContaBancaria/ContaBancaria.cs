@@ -16,9 +16,9 @@ internal class ContaBancaria : UIMenu
         Senha = senha;
     }
 
-    public override async Task Executar()
+    public override async Task ExecutarMetodosExercicios()
     {
-        await base.Executar();
+        await base.ExecutarMetodosExercicios();
         ExibirTituloDoExercicio("Exercício sobre Conta Bancaria");
         MostrarDados();
     }

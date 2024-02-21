@@ -10,7 +10,8 @@ internal class UIMenu
         Console.WriteLine("* " + titulo + " *");
         Console.WriteLine(asteriscos + "****" + "\n");
     }
-    public virtual async Task Executar()
+
+    public virtual async Task ExecutarMetodosExercicios()
     {
         Console.Clear();
     }
@@ -65,7 +66,7 @@ internal class UIMenu
             }
             var opcaoSelecionada = listaOpcoes[opcaoConverted];
             UIMenu exercicioASerExibido = opcaoSelecionada.Value;
-            await exercicioASerExibido.Executar();
+            await exercicioASerExibido.ExecutarMetodosExercicios();
 
             Console.WriteLine("Clique em qualquer tecla para voltar ao menu.");
             Console.ReadKey();

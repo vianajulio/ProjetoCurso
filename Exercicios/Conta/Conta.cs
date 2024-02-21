@@ -7,9 +7,9 @@ internal class Conta : UIMenu
     private string Titular;
     private float Saldo;
 
-    public override async Task Executar()
+    public override async Task ExecutarMetodosExercicios()
     {
-        await base.Executar();
+        await base.ExecutarMetodosExercicios();
         ExibirTituloDoExercicio("Exercício sobre Conta");
         MostrarDados();
     }
