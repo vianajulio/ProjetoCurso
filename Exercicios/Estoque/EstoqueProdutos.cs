@@ -9,7 +9,7 @@ internal class EstoqueProdutos : UIMenu
     public override async Task Executar()
     {
         await base.Executar();
-        ExibirTituloDoExercicio("Exercício sobre Conta Bancaria");
+        ExibirTituloDoExercicio("Exercício sobre Estoque de produtos");
         CadastrarProdutos();
         MostrarProdutos();
     }

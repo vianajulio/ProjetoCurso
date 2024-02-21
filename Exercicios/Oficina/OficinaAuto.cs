@@ -6,7 +6,14 @@ using UI;
 
 internal class OficinaAuto : UIMenu
 {
-
+    public override async Task Executar()
+    {
+        await base.Executar();
+        ExibirTituloDoExercicio("Exercício sobre Oficina mecânica de autos");
+        CadastrarFicha();
+        MostrarFicha();
+        Console.ReadKey();
+    }
     public List<string> problemas = new List<string>
     {
         "Problema na junta do motor;",
@@ -19,15 +26,6 @@ internal class OficinaAuto : UIMenu
     public List<VeiculoOficina> veiculosManutencao = new List<VeiculoOficina>
     {
     };
-
-    public override async Task Executar()
-    {
-        await base.Executar();
-        ExibirTituloDoExercicio("Exercício sobre Conta Bancaria");
-        CadastrarFicha();
-        MostrarFicha();
-        Console.ReadKey();
-    }
 
     private void MostrarFicha()
     {
@@ -53,6 +51,8 @@ internal class OficinaAuto : UIMenu
         string problemaVeiculo = problemas[problema];
         VeiculoOficina veiculoManutencao = new VeiculoOficina(veiculo, responsavel, valorReparo, problemaVeiculo);
         veiculosManutencao.Add(veiculoManutencao);
+
+        //Fazer do while para retornar para cadastro e um menu para exibir lista
     }
 
 }
