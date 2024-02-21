@@ -58,15 +58,6 @@ internal class OficinaAuto : Menu, InterfaceMenu
     public List<VeiculoOficina> veiculosManutencao = new List<VeiculoOficina>
     {
     };
-    
-    public override async Task ExecutarMetodosExercicios()
-    {
-        await base.ExecutarMetodosExercicios();
-        ExibirTituloDoExercicio("Exercício sobre Conta Bancaria");
-        CadastrarFicha();
-        MostrarFicha();
-        Console.ReadKey();
-    }
 
     private void MostrarFicha()
     {
