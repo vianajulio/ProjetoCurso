@@ -1,4 +1,4 @@
-﻿using ProjetoCurso.UIMenu;
+using ProjetoCurso.UIMenu;
 using ProjetoCurso;
 using ProjetoCurso.Interfaces;
 
