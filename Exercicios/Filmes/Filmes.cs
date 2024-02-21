@@ -1,10 +1,10 @@
 ﻿namespace ProjetoCurso.Exercicios.Filmes;
 
-
-using ProjetoCurso.UI;
+using ProjetoCurso.Interfaces;
+using ProjetoCurso.UIMenu;
 using System.Text.Json;
 
-class Filmes : UIMenu
+class Filmes : Menu, InterfaceMenu
 {
     public override async Task ExecutarMetodosExercicios()
     {

@@ -2,9 +2,9 @@
 
 namespace ProjetoCurso.Exercicios.CheapShark;
 
-
-using ProjetoCurso.UI;
-internal class CheapSharkHttpClient : UIMenu
+using ProjetoCurso.Interfaces;
+using ProjetoCurso.UIMenu;
+internal class CheapSharkHttpClient : Menu, InterfaceMenu
 {
     public override async Task ExecutarMetodosExercicios()
     {

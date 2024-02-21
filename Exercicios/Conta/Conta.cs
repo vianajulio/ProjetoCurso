@@ -1,18 +1,19 @@
 ﻿namespace ProjetoCurso.Exercicios.Conta;
 
-using ProjetoCurso.UI;
+using ProjetoCurso.Interfaces;
+using ProjetoCurso.UIMenu;
 
-internal class Conta : UIMenu
+internal class Conta : Menu, InterfaceMenu
 {
-    private string Titular;
-    private float Saldo;
-
     public override async Task ExecutarMetodosExercicios()
     {
         await base.ExecutarMetodosExercicios();
         ExibirTituloDoExercicio("Exercício sobre Conta");
-        MostrarDados();
+
     }
+
+    private string Titular;
+    private float Saldo;
 
     public Conta(string titular, float saldo)
     {
