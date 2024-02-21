@@ -5,9 +5,9 @@ using ProjetoCurso.UI;
 
 class PaisMain : UIMenu
 {
-    public override async Task Executar()
+    public override async Task ExecutarMetodosExercicios()
     {
-        await base.Executar();
+        await base.ExecutarMetodosExercicios();
         ExibirTituloDoExercicio("Exercício sobre Paises");
         await MostrarDados();
     }

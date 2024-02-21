@@ -5,9 +5,9 @@ using ProjetoCurso.UI;
 
 internal class InteCarro : UIMenu
 {
-    public override async Task Executar()
+    public override async Task ExecutarMetodosExercicios()
     {
-        await base.Executar();
+        await base.ExecutarMetodosExercicios();
         ExibirTituloDoExercicio("Exercício sobre Carro");
         CarroInte();
     }

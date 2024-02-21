@@ -4,7 +4,6 @@ using ProjetoCurso.Exercicios.Conta;
 using ProjetoCurso.Exercicios.ContaBancaria;
 using ProjetoCurso.Exercicios.Filmes;
 using ProjetoCurso.Exercicios.Livros;
-using ProjetoCurso.Exercicios.Usuarios;
 using ProjetoCurso.Exercicios.Paises;
 using ProjetoCurso.UI;
 
@@ -22,7 +21,7 @@ class Program
         opcoes.Add("Cheap Shark HTTP", new CheapSharkHttpClient());
         opcoes.Add("Livros HTTP", new LivrosHttpClient());
         opcoes.Add("Pais", new PaisMain());
-        opcoes.Add("Usuarios", new Usuarios());
+        //opcoes.Add("Usuarios", new Usuarios());
 
         await UIMenu.ExibirOpcoes(opcoes);
     }
