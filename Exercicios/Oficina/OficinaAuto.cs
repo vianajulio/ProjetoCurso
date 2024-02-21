@@ -1,10 +1,9 @@
 ﻿namespace ProjetoCurso.Exercicios.Oficina;
 
 using System;
-using System.Threading.Channels;
-using UI;
+using UIMenu;
 
-internal class OficinaAuto : UIMenu
+internal class OficinaAuto : Menu
 {
 
     public List<string> problemas = new List<string>
@@ -20,9 +19,9 @@ internal class OficinaAuto : UIMenu
     {
     };
 
-    public override async Task Executar()
+    public override async Task ExecutarMetodosExercicios()
     {
-        await base.Executar();
+        await base.ExecutarMetodosExercicios();
         ExibirTituloDoExercicio("Exercício sobre Conta Bancaria");
         CadastrarFicha();
         MostrarFicha();
@@ -37,20 +36,20 @@ internal class OficinaAuto : UIMenu
     private void CadastrarFicha()
     {
         Console.WriteLine("Digite o nome, modelo e ano do veiculo: ");
-        string veiculo = Console.ReadLine();
+        string veiculo = Console.ReadLine() ?? "SEM NOME";
         Console.WriteLine("Digite o nome do mecânico responsavel pelo reparo: ");
-        string responsavel = Console.ReadLine();
+        string responsavel = Console.ReadLine() ?? "SEM NOME";
         Console.WriteLine("Digite o valor cotado para o reparo: ");
-        double valorReparo = double.Parse(Console.ReadLine());
+        double valorReparo = double.Parse(Console.ReadLine() ?? "0");
         Console.WriteLine("Selecione um dos problemas listados: ");
         for (int i = 0; i < problemas.Count; i++)
         {
             Console.WriteLine($"{i} - {problemas[i]}");
         }
         Console.Write("\nOpção: ");
-        int problema = int.Parse(Console.ReadLine());
+        int numProblema = int.Parse(Console.ReadLine() ?? "0");
 
-        string problemaVeiculo = problemas[problema];
+        string problemaVeiculo = problemas[numProblema];
         VeiculoOficina veiculoManutencao = new VeiculoOficina(veiculo, responsavel, valorReparo, problemaVeiculo);
         veiculosManutencao.Add(veiculoManutencao);
     }

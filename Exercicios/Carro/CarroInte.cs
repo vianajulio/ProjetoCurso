@@ -1,14 +1,13 @@
 ﻿namespace ProjetoCurso.Exercicios.Carro;
 
+using ProjetoCurso.Interfaces;
+using ProjetoCurso.UIMenu;
 
-using ProjetoCurso.UI;
-
-internal class InteCarro : UIMenu
+internal class InteCarro : Menu, InterfaceMenu
 {
     public override async Task ExecutarMetodosExercicios()
     {
         await base.ExecutarMetodosExercicios();
-        ExibirTituloDoExercicio("Exercício sobre Carro");
         CarroInte();
     }
     public static void CarroInte()
@@ -16,34 +15,49 @@ internal class InteCarro : UIMenu
         Carro carro = new();
         while (true)
         {
+            ExibirTituloDoExercicio("Exercício sobre Carro");
             Console.WriteLine("Digite 1 para Acelerar\nDigite 2 para Freiar\nDigite 3 para buzinar\nDigite 4 para finalizar");
-            int Digito = int.Parse(Console.ReadLine() ?? "0");
+            try
+            {
+                int Digito = int.Parse(Console.ReadLine() ?? "0");
+                if (Digito == 4) break;
+
+                switch (Digito)
+                {
+                    case 0:
+                        Console.WriteLine("Opção invvalida");
+                        break;
+                    case 1:
+                        carro.Acelerar();
+                        MostrarVelocidade();
+                        break;
+                    case 2:
+                        Console.Write("Digite a pressão desejada: ");
+                        int pressao = int.Parse(Console.ReadLine() ?? "0");
+                        carro.Frear(pressao);
+                        MostrarVelocidade();
+                        break;
+                    case 3:
+                        carro.Buzinar();
+                        break;
+                    default:
+
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                ErroInput(ex.ToString());
+            }
 
             void MostrarVelocidade()
             {
                 Console.WriteLine($"A velocidade do veiculo é: {carro.VelocidadeReal}");
             }
 
-            if (Digito == 4) break;
-
-            switch (Digito)
-            {
-                case 1:
-                    carro.Acelerar();
-                    MostrarVelocidade();
-                    break;
-                case 2:
-                    Console.Write("Digite a pressão desejada: ");
-                    int pressao = int.Parse(Console.ReadLine() ?? "0");
-                    carro.Frear(pressao);
-                    MostrarVelocidade();
-                    break;
-                case 3:
-                    carro.Buzinar();
-                    break;
-            }
             Console.ReadKey();
             Console.Clear();
+
         }
     }
 }

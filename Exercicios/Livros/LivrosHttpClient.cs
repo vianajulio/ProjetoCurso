@@ -1,9 +1,9 @@
 ﻿namespace ProjetoCurso.Exercicios.Livros;
 using System.Text.Json;
 
-using ProjetoCurso.UI;
+using ProjetoCurso.UIMenu;
 
-internal class LivrosHttpClient : UIMenu
+internal class LivrosHttpClient : Menu
 {
     public override async Task ExecutarMetodosExercicios()
     {

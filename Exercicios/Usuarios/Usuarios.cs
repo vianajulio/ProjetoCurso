@@ -1,16 +1,16 @@
-﻿using ProjetoCurso.UI;
+﻿using ProjetoCurso.UIMenu;
 using ProjetoCurso;
 
 namespace ProjetoCurso.Exercicios.Usuarios;
 
-class Usuarios : UIMenu
+class Usuarios : Menu
 {
     PessoasAdicionadas pessoasAdicionadas = new PessoasAdicionadas();
     Pessoa pessoa = new Pessoa();
     ManipulacaoDeArquivos arquivos = new ManipulacaoDeArquivos();
     string pathArquivoGerado = "";
 
-    public override async Task Executar()
+    public override async Task ExecutarMetodosExercicios()
     {
         Console.Clear();
         Console.WriteLine("Olá! O que deseja fazer? Digite o número do item");
@@ -50,6 +50,6 @@ class Usuarios : UIMenu
     {
         Console.WriteLine("\nPressione qualquer tecla para voltar ao menu principal...");
         Console.ReadKey();
-        await Executar();
+        await ExecutarMetodosExercicios();
     }
 }

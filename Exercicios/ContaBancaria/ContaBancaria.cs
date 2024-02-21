@@ -1,7 +1,9 @@
 ﻿namespace ProjetoCurso.Exercicios.ContaBancaria;
-using ProjetoCurso.UI;
 
-internal class ContaBancaria : UIMenu
+using ProjetoCurso.Interfaces;
+using ProjetoCurso.UIMenu;
+
+internal class ContaBancaria : Menu, InterfaceMenu
 {
     public int Indicador { get; }
     private string Titular { get; }

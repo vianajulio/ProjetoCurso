@@ -1,9 +1,9 @@
 ﻿using System.Text.Json;
 
 namespace ProjetoCurso.Exercicios.Paises;
-using ProjetoCurso.UI;
+using ProjetoCurso.UIMenu;
 
-class PaisMain : UIMenu
+class PaisMain : Menu
 {
     public override async Task ExecutarMetodosExercicios()
     {
@@ -20,7 +20,7 @@ class PaisMain : UIMenu
             {
                 string response = await client.GetStringAsync("https://raw.githubusercontent.com/ArthurOcFernandes/Exerc-cios-C-/curso-4-aula-2/Jsons/Paises.json");
                 var paises = JsonSerializer.Deserialize<List<Pais>>(response);
-                paises.ForEach(pais => pais.EibirPaises());
+                paises!.ForEach(pais => pais.EibirPaises());
             }
             catch (Exception error)
             {
