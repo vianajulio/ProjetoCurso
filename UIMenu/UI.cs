@@ -2,7 +2,7 @@
 
 namespace ProjetoCurso.UIMenu;
 
-internal class Menu : InterfaceMenu
+internal class Menu : IMenu
 {
     public static void ExibirCabecalho()
     {
@@ -28,7 +28,9 @@ internal class Menu : InterfaceMenu
         Console.WriteLine(asteriscos + "****" + "\n");
     }
 
-    public virtual async Task ExecutarMetodosExercicios()
+    public virtual async Task ExecutarMetodosExercicios() {}
+
+    public static void LimparTela()
     {
         Console.Clear();
     }
@@ -52,7 +54,7 @@ internal class Menu : InterfaceMenu
     {
         while (true)
         {
-            Menu.ExibirCabecalho();
+            ExibirCabecalho();
             OpcaoMenu.ExibirOpcoes(opcoes);
             await OpcaoMenu.ExecutarExercicioSelecionado(opcoes);
         }

@@ -1,6 +1,6 @@
 ﻿namespace ProjetoCurso.Interfaces;
 
-internal interface InterfaceMenu
+internal interface IMenu
 {
     Task ExecutarMetodosExercicios();
 }

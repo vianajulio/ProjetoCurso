@@ -4,7 +4,7 @@ using ProjetoCurso.Interfaces;
 using ProjetoCurso.UIMenu;
 using System.Text.Json;
 
-class Filmes : Menu, InterfaceMenu
+class Filmes : Menu, IMenu
 {
     public override async Task ExecutarMetodosExercicios()
     {

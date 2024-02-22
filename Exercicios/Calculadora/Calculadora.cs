@@ -1,7 +1,16 @@
-﻿namespace ProjetoCurso.Exercicios.Calculadora;
+﻿using ProjetoCurso.Interfaces;
+using ProjetoCurso.UIMenu;
 
-internal class Calculadora
+namespace ProjetoCurso.Exercicios.Calculadora;
+
+internal class Calculadora : Menu, IMenu
 {
+    public override async Task ExecutarMetodosExercicios()
+    {
+        await base.ExecutarMetodosExercicios();
+        Console.WriteLine("");
+    }
+
     public void Somar(int numA, int numB)
     {
         Console.WriteLine(numA + numB);

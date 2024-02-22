@@ -4,7 +4,7 @@ using ProjetoCurso.Interfaces;
 
 namespace ProjetoCurso.Exercicios.Usuarios;
 
-class Usuarios : Menu, InterfaceMenu
+class Usuarios : Menu, IMenu
 {
     PessoasAdicionadas pessoasAdicionadas = new PessoasAdicionadas();
     Pessoa pessoa = new Pessoa();

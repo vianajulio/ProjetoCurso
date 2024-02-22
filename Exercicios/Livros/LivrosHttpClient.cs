@@ -3,7 +3,7 @@ using System.Text.Json;
 using ProjetoCurso.Interfaces;
 using ProjetoCurso.UIMenu;
 
-internal class LivrosHttpClient : Menu, InterfaceMenu
+internal class LivrosHttpClient : Menu, IMenu
 {
     public override async Task ExecutarMetodosExercicios()
     {

@@ -50,8 +50,9 @@ internal class OpcaoMenu : Menu
     {
         var listaOpcoes = ConverterDicionarioParaLista(opcoes);
         var opcaoSelecionada = listaOpcoes[SelecionarOpcao()];
-        Menu exercicioASerExibido = opcaoSelecionada.Value;
+        LimparTela();
         ExibirTituloDoExercicio(opcaoSelecionada.Key);
+        Menu exercicioASerExibido = opcaoSelecionada.Value;
         await exercicioASerExibido.ExecutarMetodosExercicios();
         Console.ReadKey();
     }

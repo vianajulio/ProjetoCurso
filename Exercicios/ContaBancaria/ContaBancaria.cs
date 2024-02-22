@@ -3,7 +3,7 @@
 using ProjetoCurso.Interfaces;
 using ProjetoCurso.UIMenu;
 
-internal class ContaBancaria : Menu, InterfaceMenu
+internal class ContaBancaria : Menu, IMenu
 {
     public int Indicador { get; }
     private string Titular { get; }
@@ -21,7 +21,7 @@ internal class ContaBancaria : Menu, InterfaceMenu
     public override async Task ExecutarMetodosExercicios()
     {
         await base.ExecutarMetodosExercicios();
-        ExibirTituloDoExercicio("Exercício sobre Conta Bancaria");
+        //ExibirTituloDoExercicio("Exercício sobre Conta Bancaria");
         MostrarDados();
     }
 

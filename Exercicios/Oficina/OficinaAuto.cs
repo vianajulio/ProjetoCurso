@@ -4,7 +4,7 @@ using ProjetoCurso.Interfaces;
 using System;
 using UIMenu;
 
-internal class OficinaAuto : Menu, InterfaceMenu
+internal class OficinaAuto : Menu, IMenu
 {
     public override async Task ExecutarMetodosExercicios()
     {

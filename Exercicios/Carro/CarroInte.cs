@@ -3,7 +3,7 @@
 using ProjetoCurso.Interfaces;
 using ProjetoCurso.UIMenu;
 
-internal class InteCarro : Menu, InterfaceMenu
+internal class InteCarro : Menu, IMenu
 {
     public override async Task ExecutarMetodosExercicios()
     {

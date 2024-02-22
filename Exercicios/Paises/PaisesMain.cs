@@ -5,7 +5,7 @@ namespace ProjetoCurso.Exercicios.Paises;
 using ProjetoCurso.Interfaces;
 using ProjetoCurso.UIMenu;
 
-class PaisMain : Menu, InterfaceMenu
+class PaisMain : Menu, IMenu
 {
     public override async Task ExecutarMetodosExercicios()
     {
