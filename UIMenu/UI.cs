@@ -40,4 +40,21 @@ internal class Menu : InterfaceMenu
         Console.WriteLine("Aperte uma tecla para voltar ao menu\n");
         Console.ReadKey();
     }
+
+    public static string LinhasListaOpcoes()
+    {
+        int tamanhoMax = 60;
+        string linha = new string('-', tamanhoMax);
+        return linha;
+    }
+
+    public static async Task ExecutarMenu(Dictionary<string, Menu> opcoes)
+    {
+        while (true)
+        {
+            Menu.ExibirCabecalho();
+            OpcaoMenu.ExibirOpcoes(opcoes);
+            await OpcaoMenu.ExecutarExercicioSelecionado(opcoes);
+        }
+    }
 }

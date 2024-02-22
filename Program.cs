@@ -25,8 +25,6 @@ class Program
         opcoes.Add("Usuarios", new Usuarios());
         opcoes.Add("Oficina", new OficinaAuto());
 
-        Menu.ExibirCabecalho();
-        OpcaoMenu.ExibirOpcoes(opcoes);
-        await OpcaoMenu.ExecutarExercicio(opcoes);
+        await Menu.ExecutarMenu(opcoes);
     }
 }
