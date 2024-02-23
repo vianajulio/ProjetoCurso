@@ -4,12 +4,6 @@ namespace ProjetoCurso.UIMenu;
 
 internal class Menu : IMenu
 {
-
-    public Menu()
-    {
-        ExecutarMetodosExercicios();
-    }
-
     public static void ExibirCabecalho()
     {
         Console.Clear();
@@ -23,7 +17,7 @@ internal class Menu : IMenu
                               __/ |                                                             
                              |___/                                                              
         ");
-        Console.WriteLine("Bem vindo! Aqui você poderá acompanhar a evolução dos Devs Jr's.\n\n\n");
+        Console.WriteLine("Bem vindo! Aqui você poderá acompanhar a evolução dos Devs Jr's.\n");
     }
     public static void ExibirTituloDoExercicio(string titulo)
     {

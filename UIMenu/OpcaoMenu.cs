@@ -13,7 +13,6 @@ internal class OpcaoMenu : Menu
     public static void ExibirOpcoes(Dictionary<string, Menu> opcoes)
     {
         var listaOpcoes = ConverterDicionarioParaLista(opcoes);
-        listaOpcoes.ForEach(x => Console.WriteLine());
         Console.WriteLine("Veja os exercicios realizados durante o curso:");
         Console.WriteLine("Digite o número correspondente para acessar o exercício:\n");
 
