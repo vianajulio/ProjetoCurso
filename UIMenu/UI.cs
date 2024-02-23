@@ -4,6 +4,12 @@ namespace ProjetoCurso.UIMenu;
 
 internal class Menu : IMenu
 {
+
+    public Menu()
+    {
+        ExecutarMetodosExercicios();
+    }
+
     public static void ExibirCabecalho()
     {
         Console.Clear();
