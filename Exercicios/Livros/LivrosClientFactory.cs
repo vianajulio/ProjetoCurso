@@ -4,8 +4,12 @@ using System.Net.Http.Headers;
 
 namespace ProjetoCurso.Exercicios.Livros;
 
+<<<<<<< HEAD
 public class LivrosClientFactory 
     //: IHttpClientFactory
+=======
+public class LivrosClientFactory
+>>>>>>> 824ac97dd50d85f2e8cc8a03c43052d9eb0bb8a7
 {
     private string url = "https://raw.githubusercontent.com/ArthurOcFernandes/Exerc-cios-C-/curso-4-aula-2/Jsons/";
     public HttpClient CreateClient(string name)
