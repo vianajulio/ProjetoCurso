@@ -8,11 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-<<<<<<< HEAD
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-=======
-    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
->>>>>>> b56a1714c2348b9e1404c6862515c7a49dcb407f
+    <PackageReference Include="runtime.unix.System.Console" Version="4.3.1" />
   </ItemGroup>
 
 </Project>
