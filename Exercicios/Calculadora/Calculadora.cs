@@ -1,11 +1,13 @@
 ﻿using ProjetoCurso.Interfaces;
 using ProjetoCurso.UIMenu;
+using System;
+using System.Threading.Tasks;
 
 namespace ProjetoCurso.Exercicios.Calculadora;
 
 internal class Calculadora : Menu, IMenu
 {
-    public override async Task ExecutarMetodosExercicios()
+    public new async Task ExecutarMetodosExercicios()
     {
         await base.ExecutarMetodosExercicios();
         Console.WriteLine("");

@@ -1,4 +1,6 @@
-﻿using System.Text.Json;
+﻿using System;
+using System.Collections.Generic;
+using System.Text.Json;
 
 namespace Petshop.Menus;
 
@@ -105,5 +107,10 @@ internal class MenuPetshop
             }
 
         }
+    }
+
+    internal static void ExibirOpcoes(Dictionary<int, MenuPetshop> opcoes)
+    {
+        throw new NotImplementedException();
     }
 }

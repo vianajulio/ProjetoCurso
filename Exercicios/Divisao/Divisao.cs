@@ -1,10 +1,12 @@
 ﻿using ProjetoCurso.UIMenu;
+using System;
+using System.Threading.Tasks;
 
 namespace ProjetoCurso.Exercicios.Divisao;
 
 internal class Divisao : Menu
 {
-    public async override Task ExecutarMetodosExercicios()
+    public new async Task ExecutarMetodosExercicios()
     {
         await base.ExecutarMetodosExercicios();
         ExibirTituloDoExercicio("Exercício sobre Divisão");

@@ -2,11 +2,13 @@
 
 using ProjetoCurso.Interfaces;
 using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using UIMenu;
 
 internal class OficinaAuto : Menu, IMenu
 {
-    public override async Task ExecutarMetodosExercicios()
+    public new async Task ExecutarMetodosExercicios()
     {
         await base.ExecutarMetodosExercicios();
         ExibirTituloDoExercicio("Exercício sobre Oficina mecânica de autos");

@@ -1,4 +1,7 @@
 ﻿using ProjetoCurso.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ProjetoCurso.UIMenu;
 
@@ -28,7 +31,6 @@ public class Menu : IMenu
         Console.WriteLine(asteriscos + "****" + "\n");
     }
 
-    public virtual async Task ExecutarMetodosExercicios() {}
 
     public static void LimparTela()
     {
@@ -58,5 +60,10 @@ public class Menu : IMenu
             OpcaoMenu.ExibirOpcoes(opcoes);
             await OpcaoMenu.ExecutarExercicioSelecionado(opcoes);
         }
+    }
+
+    public Task ExecutarMetodosExercicios()
+    {
+        throw new NotImplementedException();
     }
 }

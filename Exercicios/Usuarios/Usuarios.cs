@@ -1,6 +1,8 @@
 using ProjetoCurso.UIMenu;
 using ProjetoCurso;
 using ProjetoCurso.Interfaces;
+using System.Threading.Tasks;
+using System;
 
 namespace ProjetoCurso.Exercicios.Usuarios;
 
@@ -11,7 +13,7 @@ class Usuarios : Menu, IMenu
     ManipulacaoDeArquivos arquivos = new ManipulacaoDeArquivos();
     string pathArquivoGerado = "";
 
-    public override async Task ExecutarMetodosExercicios()
+    public new  async Task ExecutarMetodosExercicios()
     {
         Console.Clear();
         Console.WriteLine("Olá! O que deseja fazer? Digite o número do item");

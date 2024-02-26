@@ -1,7 +1,10 @@
 ﻿namespace ProjetoCurso.Exercicios.Livros;
 
-using System.Net.Http.Headers;
+using System;
+using System.Collections.Generic;
+using System.Net.Http;
 using System.Text.Json;
+using System.Threading.Tasks;
 using ProjetoCurso.Interfaces;
 using ProjetoCurso.UIMenu;
 
@@ -12,7 +15,7 @@ public class LivrosHttpClient : Menu, IMenu
     {
         this.client = client;
     }
-    public override async Task ExecutarMetodosExercicios()
+    public new async Task ExecutarMetodosExercicios()
     {
         await base.ExecutarMetodosExercicios();
         await MostrarLivros();

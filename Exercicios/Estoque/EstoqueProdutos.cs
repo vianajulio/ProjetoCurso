@@ -1,12 +1,14 @@
 ﻿namespace ProjetoCurso.Exercicios.Estoque;
 using ProjetoCurso.UIMenu;
+using System;
+using System.Threading.Tasks;
 
 internal class EstoqueProdutos : Menu
 {
-    public string Nome { get; set; }
+    public string? Nome { get; set; }
     public int Quantidade { get; set; }    
 
-    public override async Task ExecutarMetodosExercicios()
+    public new async Task ExecutarMetodosExercicios()
     {
         await base.ExecutarMetodosExercicios();
         ExibirTituloDoExercicio("Exercício sobre Conta Bancaria");

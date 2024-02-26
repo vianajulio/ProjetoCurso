@@ -10,6 +10,8 @@ using ProjetoCurso.Exercicios.Oficina;
 using ProjetoCurso.Exercicios.Usuarios;
 using ProjetoCurso.Exercicios.Calculadora;
 using ProjetoCurso.Petshop;
+using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace ProjetoCurso;
 class Program

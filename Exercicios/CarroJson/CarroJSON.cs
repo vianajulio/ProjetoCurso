@@ -1,11 +1,15 @@
 ﻿namespace ProjetoCurso.Exercicios.Filmes;
 
 using ProjetoCurso.UIMenu;
+using System;
+using System.Collections.Generic;
+using System.Net.Http;
 using System.Text.Json;
+using System.Threading.Tasks;
 
 internal class CarroJSON : Menu
 {
-    public override async Task ExecutarMetodosExercicios()
+    public new async Task ExecutarMetodosExercicios()
     {
         await base.ExecutarMetodosExercicios();
         ExibirTituloDoExercicio("Exercício sobre Filme");

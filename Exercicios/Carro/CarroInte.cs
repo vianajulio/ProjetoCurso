@@ -2,10 +2,12 @@
 
 using ProjetoCurso.Interfaces;
 using ProjetoCurso.UIMenu;
+using System;
+using System.Threading.Tasks;
 
 internal class InteCarro : Menu, IMenu
 {
-    public override async Task ExecutarMetodosExercicios()
+    public new async Task ExecutarMetodosExercicios()
     {
         await base.ExecutarMetodosExercicios();
         CarroInte();

@@ -2,11 +2,15 @@
 
 using ProjetoCurso.Interfaces;
 using ProjetoCurso.UIMenu;
+using System;
+using System.Collections.Generic;
+using System.Net.Http;
 using System.Text.Json;
+using System.Threading.Tasks;
 
 class Filmes : Menu, IMenu
 {
-    public override async Task ExecutarMetodosExercicios()
+    public new async Task ExecutarMetodosExercicios()
     {
         await base.ExecutarMetodosExercicios();
         ExibirTituloDoExercicio("Exercício sobre Filme");

@@ -2,6 +2,8 @@
 
 using ProjetoCurso.Interfaces;
 using ProjetoCurso.UIMenu;
+using System;
+using System.Threading.Tasks;
 
 internal class ContaBancaria : Menu, IMenu
 {
@@ -18,10 +20,9 @@ internal class ContaBancaria : Menu, IMenu
         Senha = senha;
     }
 
-    public override async Task ExecutarMetodosExercicios()
+    public new async Task ExecutarMetodosExercicios()
     {
         await base.ExecutarMetodosExercicios();
-        //ExibirTituloDoExercicio("Exercício sobre Conta Bancaria");
         MostrarDados();
     }
 
