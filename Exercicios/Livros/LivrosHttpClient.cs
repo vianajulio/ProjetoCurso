@@ -5,28 +5,24 @@ using System.Text.Json;
 using ProjetoCurso.Interfaces;
 using ProjetoCurso.UIMenu;
 
-internal class LivrosHttpClient : Menu, IMenu
+public class LivrosHttpClient : Menu, IMenu
 {
-    private string url = "https://raw.githubusercontent.com/ArthurOcFernandes/Exerc-cios-C-/curso-4-aula-2/Jsons/";
+    private HttpClient client;
+    public LivrosHttpClient(HttpClient client)
+    {
+        this.client = client;
+    }
     public override async Task ExecutarMetodosExercicios()
     {
         await base.ExecutarMetodosExercicios();
         await MostrarLivros();
     }
-    HttpClient CriarCliente()
-    {
-        HttpClient _client = new HttpClient();
-        _client.DefaultRequestHeaders.Accept.Clear();
-        _client.DefaultRequestHeaders.Accept.Add(
-            new MediaTypeWithQualityHeaderValue("application/json"));
-        _client.BaseAddress = new Uri(url);
-        return _client;
-    }
-    public async Task<string?> LivrosHttp()
+
+    public async Task<string?> ListaLivrosAPI()
     {
         try
         {
-            string resLivros = await CriarCliente().GetStringAsync("Livros.json");
+            string resLivros = await client.GetStringAsync("Livros.json");
             return resLivros;
         }
         catch (Exception e)
@@ -36,9 +32,9 @@ internal class LivrosHttpClient : Menu, IMenu
         }
     }
 
-    async Task MostrarLivros()
+    public async Task MostrarLivros()
     {
-        string? resLivros = await LivrosHttp();
+        string? resLivros = await ListaLivrosAPI();
         if (resLivros != null && !resLivros.Equals(""))
         {
             var livros = JsonSerializer.Deserialize<List<Livros>>(resLivros);
