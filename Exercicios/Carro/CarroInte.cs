@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 internal class InteCarro : Menu, IMenu
 {
-    public new async Task ExecutarMetodosExercicios()
+    public override async Task ExecutarMetodosExercicios()
     {
         await base.ExecutarMetodosExercicios();
         CarroInte();

@@ -8,7 +8,7 @@ using UIMenu;
 
 internal class OficinaAuto : Menu, IMenu
 {
-    public new async Task ExecutarMetodosExercicios()
+    public override async Task ExecutarMetodosExercicios()
     {
         await base.ExecutarMetodosExercicios();
         ExibirTituloDoExercicio("Exercício sobre Oficina mecânica de autos");

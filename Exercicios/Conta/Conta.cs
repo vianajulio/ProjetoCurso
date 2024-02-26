@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 internal class Conta : Menu, IMenu
 {
-    public new async Task ExecutarMetodosExercicios()
+    public override async Task ExecutarMetodosExercicios()
     {
         await base.ExecutarMetodosExercicios();
         ExibirTituloDoExercicio("Exercício sobre Conta");

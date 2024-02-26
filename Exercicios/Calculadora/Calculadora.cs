@@ -7,7 +7,7 @@ namespace ProjetoCurso.Exercicios.Calculadora;
 
 internal class Calculadora : Menu, IMenu
 {
-    public new async Task ExecutarMetodosExercicios()
+    public override async Task ExecutarMetodosExercicios()
     {
         await base.ExecutarMetodosExercicios();
         Console.WriteLine("");

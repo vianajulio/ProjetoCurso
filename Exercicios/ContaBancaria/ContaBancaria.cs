@@ -7,6 +7,11 @@ using System.Threading.Tasks;
 
 internal class ContaBancaria : Menu, IMenu
 {
+    public override async Task ExecutarMetodosExercicios()
+    {
+        await base.ExecutarMetodosExercicios();
+        MostrarDados();
+    }
     public int Indicador { get; }
     private string Titular { get; }
     private float Saldo { get; }
@@ -20,11 +25,6 @@ internal class ContaBancaria : Menu, IMenu
         Senha = senha;
     }
 
-    public new async Task ExecutarMetodosExercicios()
-    {
-        await base.ExecutarMetodosExercicios();
-        MostrarDados();
-    }
 
     public void MostrarDados()
     {

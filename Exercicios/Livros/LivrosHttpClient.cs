@@ -15,7 +15,7 @@ public class LivrosHttpClient : Menu, IMenu
     {
         this.client = client;
     }
-    public new async Task ExecutarMetodosExercicios()
+    public override async Task ExecutarMetodosExercicios()
     {
         await base.ExecutarMetodosExercicios();
         await MostrarLivros();

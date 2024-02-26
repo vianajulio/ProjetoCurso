@@ -62,8 +62,5 @@ public class Menu : IMenu
         }
     }
 
-    public Task ExecutarMetodosExercicios()
-    {
-        throw new NotImplementedException();
-    }
+    public virtual async Task ExecutarMetodosExercicios() { Console.Clear(); }
 }
