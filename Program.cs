@@ -9,6 +9,7 @@ using ProjetoCurso.UIMenu;
 using ProjetoCurso.Exercicios.Oficina;
 using ProjetoCurso.Exercicios.Usuarios;
 using ProjetoCurso.Exercicios.Calculadora;
+using ProjetoCurso.Petshop;
 
 namespace ProjetoCurso;
 class Program
@@ -26,6 +27,7 @@ class Program
         opcoes.Add("Cheap Shark HTPP Request", new CheapSharkHttpClient());
         opcoes.Add("Livros HTPP Request", new LivrosHttpClient());
         opcoes.Add("Pais HTPP Request", new PaisMain());
+        opcoes.Add("Petshop", new PetshopMain());
 
         await Menu.ExecutarMenu(opcoes);
     }
