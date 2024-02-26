@@ -47,7 +47,7 @@ internal class MenuPetshop
                 ExibirCabecalho();
 
                 Console.WriteLine("* Digite -1 para encerrar o programa;");
-                Console.WriteLine("* Digite 0 para voltar ao menu dos exercícios;");
+                Console.WriteLine("* Digite 0 para voltar ao menu dos exercícios e pressione em qualquer tecla duas vezes;");
                 Console.WriteLine("* Digite 1 agendar uma consulta;");
                 Console.WriteLine("* Digite 2 ver os dados de um arquivo;");
                 Console.Write("-> Sua resposta: ");
@@ -59,16 +59,15 @@ internal class MenuPetshop
             } while (numeroOpcaoConvertido < -1 || numeroOpcaoConvertido > opcoes.Count);
 
             if (numeroOpcaoConvertido == -1) Environment.Exit(0);
-            if (numeroOpcaoConvertido == 0) { break; };
+            if (numeroOpcaoConvertido == 0) break;
 
             MenuPetshop opcaoSelecionada = opcoes[numeroOpcaoConvertido];
             opcaoSelecionada.ExecutarMetodosDosMenus();
 
             Console.Write("\nPressione qualquer tecla para voltar ao menu.");
-            //Console.ReadKey();
+            Console.ReadKey();
             Console.Clear();
         }
-        Console.WriteLine("TESTE");
     }
     public static void RegistrarInformacoes<T>(List<T> listaDoRegistro, string nomeDoArquivo)
     {

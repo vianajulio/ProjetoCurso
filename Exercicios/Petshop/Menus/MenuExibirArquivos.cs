@@ -35,6 +35,8 @@ internal class MenuExibirArquivos : MenuPetshop
                 Console.WriteLine($"  * Nome do Pet: {consulta.NomeDoPet}");
                 Console.WriteLine($"  * Duração: {consulta.Duracao}\n");
             }
+
+            
         }
         catch( Exception error ) 
         {
