@@ -25,7 +25,7 @@ class Program
         opcoes.Add("Conta Bancaria", new ContaBancaria(1, "Fraga", 100, 123));
         opcoes.Add("Filmes HTPP Request", new Filmes());
         opcoes.Add("Cheap Shark HTPP Request", new CheapSharkHttpClient());
-        opcoes.Add("Livros HTPP Request", new LivrosHttpClient());
+        opcoes.Add("Livros HTPP Request", new LivrosHttpClient(new LivrosClientFactory().CreateClient("Livros")));
         opcoes.Add("Pais HTPP Request", new PaisMain());
         opcoes.Add("Petshop", new PetshopMain());
 

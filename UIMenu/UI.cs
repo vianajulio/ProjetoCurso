@@ -2,7 +2,7 @@
 
 namespace ProjetoCurso.UIMenu;
 
-internal class Menu : IMenu
+public class Menu : IMenu
 {
     public static void ExibirCabecalho()
     {
