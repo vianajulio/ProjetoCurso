@@ -8,10 +8,8 @@ internal class EstoqueProdutos : Menu
     public string? Nome { get; set; }
     public int Quantidade { get; set; }    
 
-    public new async Task ExecutarMetodosExercicios()
+    public async Task ExecutarMetodosExercicios()
     {
-        await base.ExecutarMetodosExercicios();
-        ExibirTituloDoExercicio("Exercício sobre Conta Bancaria");
         CadastrarProdutos();
         MostrarProdutos();
     }

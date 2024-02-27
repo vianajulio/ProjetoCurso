@@ -12,13 +12,14 @@ using ProjetoCurso.Exercicios.Calculadora;
 using ProjetoCurso.Petshop;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using ProjetoCurso.Interfaces;
 
 namespace ProjetoCurso;
 class Program
 {
     public static async Task Main(string[] args)
     {
-        Dictionary<string, Menu> opcoes = new();
+        Dictionary<string, IMenu> opcoes = new();
         opcoes.Add("Carro", new InteCarro());
         opcoes.Add("Calculadora", new Calculadora());
         opcoes.Add("Conta", new Conta("Fraga", 100));
@@ -31,6 +32,6 @@ class Program
         opcoes.Add("Pais HTPP Request", new PaisMain());
         opcoes.Add("Petshop", new PetshopMain());
 
-        await Menu.ExecutarMenu(opcoes);
+        await LoopMenu.LoopMenuExercicios(opcoes);
     }
 }

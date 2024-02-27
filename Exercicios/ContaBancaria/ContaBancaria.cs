@@ -5,11 +5,10 @@ using ProjetoCurso.UIMenu;
 using System;
 using System.Threading.Tasks;
 
-internal class ContaBancaria : Menu, IMenu
+internal class ContaBancaria : IMenu
 {
-    public override async Task ExecutarMetodosExercicios()
+    public async Task ExecutarMetodosExercicios()
     {
-        await base.ExecutarMetodosExercicios();
         MostrarDados();
     }
     public int Indicador { get; }

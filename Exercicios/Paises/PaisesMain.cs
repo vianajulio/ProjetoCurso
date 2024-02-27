@@ -11,10 +11,8 @@ using System.Threading.Tasks;
 
 class PaisMain : Menu, IMenu
 {
-    public override async Task ExecutarMetodosExercicios()
+    public async Task ExecutarMetodosExercicios()
     {
-        await base.ExecutarMetodosExercicios();
-        ExibirTituloDoExercicio("Exercício sobre Paises");
         await MostrarDados();
     }
 

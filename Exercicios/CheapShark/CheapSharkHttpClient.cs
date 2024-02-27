@@ -9,12 +9,10 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-internal class CheapSharkHttpClient : Menu, IMenu
+internal class CheapSharkHttpClient : IMenu
 {
-    public override async Task ExecutarMetodosExercicios()
+    public async Task ExecutarMetodosExercicios()
     {
-        await base.ExecutarMetodosExercicios();
-        ExibirTituloDoExercicio("Exercício sobre CheapShark");
         await CheapSharkHttp();
     }
     public static async Task CheapSharkHttp()

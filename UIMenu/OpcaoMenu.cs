@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoCurso.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,13 +8,13 @@ namespace ProjetoCurso.UIMenu;
 
 internal class OpcaoMenu : Menu
 {
-    private static List<KeyValuePair<string, Menu>> ConverterDicionarioParaLista(Dictionary<string, Menu> opcoes)
+    private static List<KeyValuePair<string, IMenu>> ConverterDicionarioParaLista(Dictionary<string, IMenu> opcoes)
     {
-        List<KeyValuePair<string, Menu>> listaOpcoes = opcoes.ToList();
+        List<KeyValuePair<string, IMenu>> listaOpcoes = opcoes.ToList();
         return listaOpcoes;
     }
 
-    public static void ExibirOpcoes(Dictionary<string, Menu> opcoes)
+    public static void ExibirOpcoes(Dictionary<string, IMenu> opcoes)
     {
         var listaOpcoes = ConverterDicionarioParaLista(opcoes);
         Console.WriteLine("Veja os exercicios realizados durante o curso:");
@@ -48,13 +49,13 @@ internal class OpcaoMenu : Menu
         }
     }
 
-    public static async Task ExecutarExercicioSelecionado(Dictionary<string, Menu> opcoes)
+    public static async Task ExecutarExercicioSelecionado(Dictionary<string, IMenu> opcoes)
     {
         var listaOpcoes = ConverterDicionarioParaLista(opcoes);
         var opcaoSelecionada = listaOpcoes[SelecionarOpcao()];
         LimparTela();
         ExibirTituloDoExercicio(opcaoSelecionada.Key);
-        Menu exercicioASerExibido = opcaoSelecionada.Value;
+        IMenu exercicioASerExibido = opcaoSelecionada.Value;
         await exercicioASerExibido.ExecutarMetodosExercicios();
         Console.ReadKey();
     }

@@ -8,12 +8,10 @@ using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-class Filmes : Menu, IMenu
+class Filmes : IMenu
 {
-    public override async Task ExecutarMetodosExercicios()
+    public async Task ExecutarMetodosExercicios()
     {
-        await base.ExecutarMetodosExercicios();
-        ExibirTituloDoExercicio("Exercício sobre Filme");
         await MostrarDados();
     }
     public static async Task MostrarDados()

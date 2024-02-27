@@ -6,7 +6,7 @@ using System;
 
 namespace ProjetoCurso.Exercicios.Usuarios;
 
-class Usuarios : Menu, IMenu
+class Usuarios : IMenu
 {
     PessoasAdicionadas pessoasAdicionadas = new PessoasAdicionadas();
     Pessoa pessoa = new Pessoa();

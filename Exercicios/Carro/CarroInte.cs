@@ -5,11 +5,10 @@ using ProjetoCurso.UIMenu;
 using System;
 using System.Threading.Tasks;
 
-internal class InteCarro : Menu, IMenu
+internal class InteCarro : IMenu
 {
-    public override async Task ExecutarMetodosExercicios()
+    public async Task ExecutarMetodosExercicios()
     {
-        await base.ExecutarMetodosExercicios();
         CarroInte();
     }
     public static void CarroInte()
@@ -17,7 +16,6 @@ internal class InteCarro : Menu, IMenu
         Carro carro = new();
         while (true)
         {
-            ExibirTituloDoExercicio("Exercício sobre Carro");
             Console.WriteLine("Digite 1 para Acelerar\nDigite 2 para Freiar\nDigite 3 para buzinar\nDigite 4 para finalizar");
             try
             {
@@ -49,7 +47,7 @@ internal class InteCarro : Menu, IMenu
             }
             catch (Exception ex)
             {
-                ErroInput(ex.ToString());
+                Menu.ErroInput(ex.ToString());
             }
 
             void MostrarVelocidade()

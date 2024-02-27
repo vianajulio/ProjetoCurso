@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoCurso.UIMenu;
 
-public class Menu : IMenu
+public class Menu
 {
     public static void ExibirCabecalho()
     {
@@ -51,16 +51,4 @@ public class Menu : IMenu
         string linha = new string('-', tamanhoMax);
         return linha;
     }
-
-    public static async Task ExecutarMenu(Dictionary<string, Menu> opcoes)
-    {
-        while (true)
-        {
-            ExibirCabecalho();
-            OpcaoMenu.ExibirOpcoes(opcoes);
-            await OpcaoMenu.ExecutarExercicioSelecionado(opcoes);
-        }
-    }
-
-    public virtual async Task ExecutarMetodosExercicios() { Console.Clear(); }
 }
