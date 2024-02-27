@@ -9,10 +9,8 @@ using System.Threading.Tasks;
 
 internal class CarroJSON : Menu
 {
-    public new async Task ExecutarMetodosExercicios()
+    public async Task ExecutarMetodosExercicios()
     {
-        await base.ExecutarMetodosExercicios();
-        ExibirTituloDoExercicio("Exercício sobre Filme");
         await MostrarDadosCarros();
     }
 

@@ -8,16 +8,15 @@ using System.Threading.Tasks;
 using ProjetoCurso.Interfaces;
 using ProjetoCurso.UIMenu;
 
-public class LivrosHttpClient : Menu, IMenu
+public class LivrosHttpClient : IMenu
 {
     private HttpClient client;
     public LivrosHttpClient(HttpClient client)
     {
         this.client = client;
     }
-    public override async Task ExecutarMetodosExercicios()
+    public async Task ExecutarMetodosExercicios()
     {
-        await base.ExecutarMetodosExercicios();
         await MostrarLivros();
     }
 

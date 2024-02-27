@@ -5,13 +5,20 @@ using ProjetoCurso.UIMenu;
 using System;
 using System.Threading.Tasks;
 
-internal class Conta : Menu, IMenu
+internal class Conta : IMenu
 {
-    public override async Task ExecutarMetodosExercicios()
+    public async Task ExecutarMetodosExercicios()
     {
-        await base.ExecutarMetodosExercicios();
-        ExibirTituloDoExercicio("Exercício sobre Conta");
+        RetornaContaAleatoria().MostrarDados();
+    }
 
+    private Conta RetornaContaAleatoria()
+    {
+        List<string> titulares = new List<string> { "Julio", "Cainã", "Rafael", "Murilo" };
+        Random rdn = new Random();
+        float saldo = rdn.Next(10, 10000) / 2;
+        Conta conta = new Conta(titulares[0], saldo);
+        return conta;
     }
 
     private string Titular;

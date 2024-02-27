@@ -8,10 +8,8 @@ using UIMenu;
 
 internal class OficinaAuto : Menu, IMenu
 {
-    public override async Task ExecutarMetodosExercicios()
+    public async Task ExecutarMetodosExercicios()
     {
-        await base.ExecutarMetodosExercicios();
-        ExibirTituloDoExercicio("Exercício sobre Oficina mecânica de autos");
         await Opcoes();
     }
 
@@ -57,9 +55,7 @@ internal class OficinaAuto : Menu, IMenu
         "Problema na lataria;"
     };
 
-    public List<VeiculoOficina> veiculosManutencao = new List<VeiculoOficina>
-    {
-    };
+    public List<VeiculoOficina> veiculosManutencao = new List<VeiculoOficina> { };
 
     private void MostrarFicha()
     {

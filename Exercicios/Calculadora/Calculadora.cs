@@ -5,12 +5,11 @@ using System.Threading.Tasks;
 
 namespace ProjetoCurso.Exercicios.Calculadora;
 
-internal class Calculadora : Menu, IMenu
+internal class Calculadora : IMenu
 {
-    public override async Task ExecutarMetodosExercicios()
+    public async Task ExecutarMetodosExercicios()
     {
-        await base.ExecutarMetodosExercicios();
-        Console.WriteLine("");
+        Console.WriteLine("Somar");
     }
 
     public void Somar(int numA, int numB)

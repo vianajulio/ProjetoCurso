@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace ProjetoCurso.Petshop;
 
-internal class PetshopMain : Menu, IMenu
+internal class PetshopMain : IMenu
 {
-    public override async Task ExecutarMetodosExercicios()
+    public async Task ExecutarMetodosExercicios()
     {
-        await base.ExecutarMetodosExercicios();
         MenuMain();
     }
 

@@ -18,7 +18,8 @@ class FilmeDesserializer
         Console.WriteLine($"Classificação entre os demais {Classificacao}");
         Console.WriteLine($"Nome do Filme: {Nome}");
         Console.WriteLine($"Ano de lançamento: {AnoL}");
-        Console.WriteLine($"Dirigido por: {Direcao}"); ;
+        Console.WriteLine($"Dirigido por: {Direcao}");
+        Console.WriteLine();
     }
 
 }

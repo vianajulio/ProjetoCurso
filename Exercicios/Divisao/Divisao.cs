@@ -6,10 +6,8 @@ namespace ProjetoCurso.Exercicios.Divisao;
 
 internal class Divisao : Menu
 {
-    public new async Task ExecutarMetodosExercicios()
+    public async Task ExecutarMetodosExercicios()
     {
-        await base.ExecutarMetodosExercicios();
-        ExibirTituloDoExercicio("Exercício sobre Divisão");
         MostrarDivisao();
     }
     public static void MostrarDivisao()
